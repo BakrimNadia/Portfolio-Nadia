@@ -93,7 +93,6 @@ const styles: { [key: string]: CSSProperties } = {
     top: 0,
     width: "100%",
     padding: "1rem",
-    backgroundColor: "rgba(0, 0, 0, 0.5)", // Fond semi-transparent
     zIndex: 10,
   },
   navList: {
