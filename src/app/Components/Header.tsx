@@ -23,7 +23,7 @@ export default function Header() {
       <nav style={styles.nav}>
         <ul style={styles.navList}>
           <li><a href="#hero" style={styles.navItem}>ACCUEIL</a></li>
-          <li><a href="#about" style={styles.navItem}>À PROPOS</a></li>
+          <li><a href="#About" style={styles.navItem}>À PROPOS</a></li>
           <li><a href="#projects" style={styles.navItem}>PROJETS</a></li>
           <li><a href="#skills" style={styles.navItem}>COMPETENCES</a></li>
           <li><a href="#contact" style={styles.navItem}>CONTACT</a></li>
@@ -77,7 +77,7 @@ export default function Header() {
       </div>
       
       {/* Flèche pour descendre */} 
-      <a href="#about" style={{position: "absolute", bottom: "2rem", left: "50%", transform: "translateX(-50%)"}}>
+      <a href="#About" style={{position: "absolute", bottom: "2rem", left: "50%", transform: "translateX(-50%)"}}>
       <ArrowDown color="#9d3c7d" size={60} />
       </a>
     </div>
