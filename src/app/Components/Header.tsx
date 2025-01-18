@@ -4,6 +4,7 @@ import React from "react";
 import { Typewriter } from "react-simple-typewriter";
 import { motion } from "framer-motion"; // Animation library
 import { CSSProperties } from "react";
+import { ArrowDown } from 'react-feather';
 
 export default function Header() {
   const greetings = [
@@ -21,11 +22,11 @@ export default function Header() {
       {/* Navigation */}
       <nav style={styles.nav}>
         <ul style={styles.navList}>
-          <li><a href="#hero" style={styles.navItem}>Accueil</a></li>
-          <li><a href="#about" style={styles.navItem}>À propos</a></li>
-          <li><a href="#projects" style={styles.navItem}>Projets</a></li>
-          <li><a href="#skills" style={styles.navItem}>Compétences</a></li>
-          <li><a href="#contact" style={styles.navItem}>Contact</a></li>
+          <li><a href="#hero" style={styles.navItem}>ACCUEIL</a></li>
+          <li><a href="#about" style={styles.navItem}>À PROPOS</a></li>
+          <li><a href="#projects" style={styles.navItem}>PROJETS</a></li>
+          <li><a href="#skills" style={styles.navItem}>COMPETENCES</a></li>
+          <li><a href="#contact" style={styles.navItem}>CONTACT</a></li>
         </ul>
       </nav>
 
@@ -74,6 +75,11 @@ export default function Header() {
           transition={{ duration: 1 }}
         />
       </div>
+      
+      {/* Flèche pour descendre */} 
+      <a href="#about" style={{position: "absolute", bottom: "2rem", left: "50%", transform: "translateX(-50%)"}}>
+      <ArrowDown color="#9d3c7d" size={60} />
+      </a>
     </div>
   );
 }
@@ -82,7 +88,7 @@ const styles: { [key: string]: CSSProperties } = {
   header: {
     position: "relative",
     height: "100vh",
-    backgroundImage: "url('./images/background.jpg')", // Remplacez par votre URL d'image
+    backgroundImage: "url('./images/PC-back.jpg')",
     backgroundSize: "cover",
     backgroundPosition: "center",
     fontFamily: "'Poppins', sans-serif",
@@ -107,7 +113,7 @@ const styles: { [key: string]: CSSProperties } = {
     textDecoration: "none",
     color: "#fff",
     fontSize: "1.2rem",
-    fontFamily: "'Abril Fatface', serif",
+   // fontFamily: "'Abril Fatface', serif",
     transition: "color 0.3s",
   },
   container: {
@@ -146,4 +152,77 @@ const styles: { [key: string]: CSSProperties } = {
     objectFit: "cover",
     boxShadow: "0 4px 8px rgba(0, 0, 0, 0.2)",
   },
+
+
+  /* RESPONSIVE DESIGN */
+  "@media (max-width: 1200px)": {
+    /* Grand écran */
+    greeting: {
+      fontSize: "2.5rem",
+    },
+    name: {
+      fontSize: "2rem",
+    },
+    title: {
+      fontSize: "1.5rem",
+    },
+    profileImage: {
+      width: "250px",
+      height: "250px",
+    },
+  },
+  "@media (max-width: 768px)": {
+    /* Tablette */
+    container: {
+      flexDirection: "column",
+      textAlign: "center",
+    },
+    textWrapper: {
+      marginBottom: "2rem",
+    },
+    navItem: {
+      fontSize: "1rem",
+      margin: "0 0.5rem",
+    },
+    greeting: {
+      fontSize: "2rem",
+    },
+    name: {
+      fontSize: "1.8rem",
+    },
+    title: {
+      fontSize: "1.2rem",
+    },
+    profileImage: {
+      width: "200px",
+      height: "200px",
+    },
+  },
+  "@media (max-width: 480px)": {
+    /* Mobile */
+    nav: {
+      padding: "0.5rem",
+    },
+    navList: {
+      flexDirection: "column",
+    },
+    navItem: {
+      margin: "0.5rem 0",
+      fontSize: "0.9rem",
+    },
+    greeting: {
+      fontSize: "1.5rem",
+    },
+    name: {
+      fontSize: "1.5rem",
+    },
+    title: {
+      fontSize: "1rem",
+    },
+    profileImage: {
+      width: "150px",
+      height: "150px",
+    },
+  },
 };
+

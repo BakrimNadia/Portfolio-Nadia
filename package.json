@@ -13,6 +13,7 @@
     "next": "15.1.4",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "react-feather": "^2.0.10",
     "react-simple-typewriter": "^5.0.1",
     "three": "^0.172.0",
     "vanta": "^0.5.24"
