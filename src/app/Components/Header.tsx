@@ -2,7 +2,7 @@
 
 import React from "react";
 import { Typewriter } from "react-simple-typewriter";
-import { motion } from "framer-motion"; // Animation library
+import { motion } from "framer-motion"; 
 import { CSSProperties } from "react";
 import { ArrowDown } from 'react-feather';
 
@@ -15,7 +15,8 @@ export default function Header() {
     "Hola",
     "こんにちは",
     "안녕하세요",
-  ]; // Liste des salutations dans différentes langues
+    "مرحبًا",
+  ]; 
 
   return (
     <div style={styles.header}>
@@ -67,7 +68,7 @@ export default function Header() {
 
         {/* Image arrondie */}
         <motion.img
-          src="./images/Nadia.JPG" // Remplacez par l'URL de votre image
+          src="./images/Nadia.JPG" 
           alt="Profil"
           style={styles.profileImage}
           initial={{ scale: 0 }}
