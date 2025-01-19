@@ -12,9 +12,10 @@ export default function About() {
       }}
     >
       {/* Titre principal */}
-      <h1 className="text-4xl font-bold mb-8 text-center text-white bg-black bg-opacity-50 px-6 py-3 rounded-lg shadow-lg">
-        Bonjour et Bienvenue sur mon Portfolio
+      <h1 className="text-4xl font-bold mb-8 text-center text-rose-500 text-opacity-80 px-6 py-3">
+      Bienvenue sur mon Portfolio
       </h1>
+      <h2 className="mb-10 text-2xl font-bold text-gray-900">À propos de moi</h2>
 
       {/* Contenu des cadres */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-6xl w-full">

@@ -25,7 +25,7 @@ export default function Header() {
         <ul style={styles.navList}>
           <li><a href="#hero" style={styles.navItem}>ACCUEIL</a></li>
           <li><a href="#About" style={styles.navItem}>À PROPOS</a></li>
-          <li><a href="#projects" style={styles.navItem}>PROJETS</a></li>
+          <li><a href="#Projets" style={styles.navItem}>PROJETS</a></li>
           <li><a href="#skills" style={styles.navItem}>COMPETENCES</a></li>
           <li><a href="#contact" style={styles.navItem}>CONTACT</a></li>
         </ul>
