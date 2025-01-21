@@ -114,7 +114,6 @@ const styles: { [key: string]: CSSProperties } = {
     textDecoration: "none",
     color: "#fff",
     fontSize: "1.2rem",
-   // fontFamily: "'Abril Fatface', serif",
     transition: "color 0.3s",
   },
   container: {
@@ -154,10 +153,8 @@ const styles: { [key: string]: CSSProperties } = {
     boxShadow: "0 4px 8px rgba(0, 0, 0, 0.2)",
   },
 
-
   /* RESPONSIVE DESIGN */
   "@media (max-width: 1200px)": {
-    /* Grand écran */
     greeting: {
       fontSize: "2.5rem",
     },
@@ -173,7 +170,6 @@ const styles: { [key: string]: CSSProperties } = {
     },
   },
   "@media (max-width: 768px)": {
-    /* Tablette */
     container: {
       flexDirection: "column",
       textAlign: "center",
@@ -200,7 +196,14 @@ const styles: { [key: string]: CSSProperties } = {
     },
   },
   "@media (max-width: 480px)": {
-    /* Mobile */
+    container: {
+      flexDirection: "column-reverse", // Superpose texte en premier
+      alignItems: "center",
+      textAlign: "center",
+    },
+    textWrapper: {
+      marginBottom: "1.5rem",
+    },
     nav: {
       padding: "0.5rem",
     },
@@ -226,4 +229,3 @@ const styles: { [key: string]: CSSProperties } = {
     },
   },
 };
-

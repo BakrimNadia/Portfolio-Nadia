@@ -93,7 +93,7 @@ export default function Contact() {
                   id="phone-number"
                   name="phone-number"
                   type="text"
-                  placeholder="123-456-7890"
+                  placeholder="06 XX XX XX XX"
                   className="block min-w-0 grow py-1.5 pl-1 pr-3 text-base text-gray-900 placeholder:text-gray-400 focus:outline focus:outline-0 sm:text-sm/6"
                 />
               </div>
