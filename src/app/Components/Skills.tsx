@@ -33,7 +33,7 @@ const slugs = [
   "figma",
 ];
 
-export function Intro() {
+export function Skills() {
   const images = slugs.map(
     (slug) => `https://cdn.simpleicons.org/${slug}/${slug}`,
   );

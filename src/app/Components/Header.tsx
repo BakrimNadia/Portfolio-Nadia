@@ -5,6 +5,7 @@ import { Typewriter } from "react-simple-typewriter";
 import { motion } from "framer-motion"; 
 import { CSSProperties } from "react";
 import { ArrowDown } from 'react-feather';
+import Navbar from "./Navbar";
 
 export default function Header() {
   const greetings = [
@@ -21,15 +22,7 @@ export default function Header() {
   return (
     <div style={styles.header}>
       {/* Navigation */}
-      <nav style={styles.nav}>
-        <ul style={styles.navList}>
-          <li><a href="#hero" style={styles.navItem}>ACCUEIL</a></li>
-          <li><a href="#About" style={styles.navItem}>À PROPOS</a></li>
-          <li><a href="#Projets" style={styles.navItem}>PROJETS</a></li>
-          <li><a href="#skills" style={styles.navItem}>COMPETENCES</a></li>
-          <li><a href="#contact" style={styles.navItem}>CONTACT</a></li>
-        </ul>
-      </nav>
+      <Navbar />
 
       {/* Content */}
       <div style={styles.container}>
