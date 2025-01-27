@@ -2,25 +2,25 @@
 
 const callouts = [
     {
-      name: 'Desk and Office',
-      description: 'Work from home accessories',
-      imageSrc: 'https://tailwindui.com/plus/img/ecommerce-images/home-page-02-edition-01.jpg',
+      name: 'Fur-ever-home',
+      description: 'Projet Full Stack en équipe - rôle scrum master - technologies utilisées : Front-end : React.js Next.js Next UI - Back-end : Node.js Express.js - Base de données : PostgreSQL - Déploiement : Vercel - Gestion de projet : Trello - Communication : Discord - Méthode agile : Scrum',
+      imageSrc: '/images/fureverhome.png',
       imageAlt: 'Desk with leather desk pad, walnut desk organizer, wireless keyboard and mouse, and porcelain mug.',
-      href: '#',
+      href: 'https://projet-fur-ever-home-front.vercel.app/',
     },
     {
-      name: 'Self-Improvement',
-      description: 'Journals and note-taking',
-      imageSrc: 'https://tailwindui.com/plus/img/ecommerce-images/home-page-02-edition-02.jpg',
+      name: 'Gazette des collègues',
+      description: 'Projet Full Stack réalisé seule - technologies utilisées : Front-end : React.js Next.js - Tailwind Next Ui - Back-end : Node.js Express.js - Base de données : PostgreSQL - Déploiement : Vercel',
+      imageSrc: '/images/gazette.png',
       imageAlt: 'Wood table with porcelain mug, leather journal, brass pen, leather key ring, and a houseplant.',
-      href: '#',
+      href: 'https://gazette-des-collegues.vercel.app/',
     },
     {
-      name: 'Travel',
-      description: 'Daily commute essentials',
-      imageSrc: 'https://tailwindui.com/plus/img/ecommerce-images/home-page-02-edition-03.jpg',
+      name: 'Nadia beauty',
+      description: 'Projet Front-end réalisé seule - technologies utilisées : React.js Next.js- Tailwind CSS - Déploiement : Vercel',
+      imageSrc: '/images/beauty.png',
       imageAlt: 'Collection of four insulated travel bottles on wooden shelf.',
-      href: '#',
+      href: 'https://nadiabeauty.vercel.app/',
     },
   ]
   
