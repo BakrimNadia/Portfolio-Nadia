@@ -20,7 +20,7 @@ export default {
   			foreground: 'var(--foreground)'
   		},
   		keyframes: {
-  			'fadeInLeft': {
+  			fadeInLeft: {
   				'0%': {
   					opacity: '0',
   					transform: 'translateX(-50px)'
@@ -29,10 +29,19 @@ export default {
   					opacity: '1',
   					transform: 'translateX(0)'
   				}
+  			},
+  			'background-position-spin': {
+  				'0%': {
+  					backgroundPosition: 'top center'
+  				},
+  				'100%': {
+  					backgroundPosition: 'bottom center'
+  				}
   			}
   		},
   		animation: {
-  			'fadeInLeft': 'fadeInLeft 1s ease-out'
+  			fadeInLeft: 'fadeInLeft 1s ease-out',
+  			'background-position-spin': 'background-position-spin 3000ms infinite alternate'
   		},
   		borderRadius: {
   			lg: 'var(--radius)',
