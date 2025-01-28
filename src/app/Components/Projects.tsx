@@ -18,7 +18,7 @@ const callouts = [
     {
       name: 'Nadia beauty',
       description: 'Projet Front-end réalisé seule - technologies utilisées : React.js Next.js- Tailwind CSS - Déploiement : Vercel',
-      imageSrc: '/images/beauty.png',
+      imageSrc: '/images/beauty1.png',
       imageAlt: 'Collection of four insulated travel bottles on wooden shelf.',
       href: 'https://nadiabeauty.vercel.app/',
     },

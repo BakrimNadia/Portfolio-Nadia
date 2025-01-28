@@ -8,20 +8,20 @@ const Footer = () => {
     <FooterContainer>
       <IconsContainer>
         <IconLink
-          href="https://www.linkedin.com/in/tonprofil"
+          href="https://www.linkedin.com/in/nadia-d-405849b9/"
           target="_blank"
           rel="noopener noreferrer"
         >
           <FaLinkedin size={30} />
         </IconLink>
         <IconLink
-          href="https://github.com/tonusername"
+          href="https://github.com/BakrimNadia"
           target="_blank"
           rel="noopener noreferrer"
         >
           <FaGithub size={30} />
         </IconLink>
-        <IconLink href="mailto:tonemail@example.com">
+        <IconLink href="nadiabakrim06@gmail.com">
           <FaEnvelope size={30} />
         </IconLink>
       </IconsContainer>
