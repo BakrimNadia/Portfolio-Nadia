@@ -22,6 +22,13 @@ const callouts = [
       imageAlt: 'Collection of four insulated travel bottles on wooden shelf.',
       href: 'https://nadiabeauty.vercel.app/',
     },
+    {
+      name: 'Su Sushi',
+      description: 'Projet Front-end réalisé seule - technologies utilisées : React.js Next.js- Tailwind CSS - Déploiement : Vercel',
+      imageSrc: '/images/su-sushi.png',
+      imageAlt: 'Collection of four insulated travel bottles on wooden shelf.',
+      href: 'https://su-sushi-bakrim-nadias-projects.vercel.app/',
+    },
   ]
   
   export default function Projects() {
@@ -38,7 +45,7 @@ const callouts = [
                   <img
                     alt={callout.imageAlt}
                     src={callout.imageSrc}
-                    className="w-full rounded-lg bg-white object-cover group-hover:opacity-75 max-sm:h-80 sm:aspect-[2/1] lg:aspect-square"
+                    className="w-full rounded-lg mt-2 object-cover group-hover:opacity-75 max-sm:h-80 sm:aspect-[2/1] lg:aspect-square transition-transform duration-300 hover:scale-110"
                   />
                   <h3 className="mt-6 text-sm text-gray-500">
                     <a href={callout.href}>
