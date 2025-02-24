@@ -13,6 +13,7 @@ body {
   flex-direction: column;
 }
 
+
 /* Optionnel : Ajoute une animation pour rendre le dégradé dynamique */
 @keyframes gradient-animation {
   0% { background-position: 0% 50%; }

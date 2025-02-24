@@ -40,7 +40,7 @@ export function Skills() {
   );
 
   return (
-    <div className="container mx-auto px-4 py-12">
+    <div className="asap-unique container mx-auto px-4 py-12">
        <h1 className="text-3xl font-bold text-gray-800 text-center">
             Mes Compétences
           </h1>
