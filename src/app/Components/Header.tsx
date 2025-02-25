@@ -2,9 +2,9 @@
 
 import React from "react";
 import { Typewriter } from "react-simple-typewriter";
-import { motion } from "framer-motion"; 
-import { CSSProperties } from "react";
-import { ArrowDown } from 'react-feather';
+import { motion } from "framer-motion";
+import { ArrowDown } from "react-feather";
+import Image from "next/image";
 import Navbar from "./Navbar";
 
 export default function Header() {
@@ -17,208 +17,72 @@ export default function Header() {
     "こんにちは",
     "안녕하세요",
     "مرحبًا",
-  ]; 
+  ];
 
   return (
-    <div style={styles.header}>
-      {/* Navigation */}
+    <div className="relative h-screen bg-cover bg-center text-white header-bg">
       <Navbar />
-
-      {/* Content */}
-      <div style={styles.container}>
-        <div style={styles.textWrapper}>
-          {/* Animation du texte multilingue */}
-          <h1 style={styles.greeting}>
+      {/* Contenu principal */}
+      <div className="flex flex-col md:flex-row justify-between items-center h-full px-8 md:px-16">
+        {/* Texte d'accueil */}
+        <div className="text-left md:text-left">
+          <h1 className="text-3xl md:text-4xl font-bold mb-4">
             <Typewriter
               words={greetings}
-              loop={true} // Boucle infinie
+              loop={true}
               cursor
               cursorStyle="_"
               typeSpeed={80}
               deleteSpeed={50}
-              delaySpeed={1000}
+              delaySpeed={1500}
             />
           </h1>
 
-          {/* Phrases animées */}
           <motion.h2
-            style={styles.name}
+            className="text-2xl md:text-3xl font-semibold mb-2"
             initial={{ x: -200, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 1 }}
           >
-            Je m&apos;appelle <span style={styles.highlight}>Nadia</span>
+            Je m&apos;appelle <span className="text-primary font-bold">Nadia</span>
           </motion.h2>
+
           <motion.h3
-            style={styles.title}
+            className="text-xl md:text-2xl font-medium mt-2"
             initial={{ x: -200, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 1.5 }}
           >
-            Développeuse Web <span style={styles.highlight}>Full Stack</span>
+            Développeuse Web <span className="text-primary font-bold">Full Stack</span>
           </motion.h3>
         </div>
 
-        {/* Image arrondie */}
-        <motion.img
-          src="./images/Nadia.JPG" 
-          alt="Profil"
-          style={styles.profileImage}
+        {/* Image du profil */}
+        <motion.div
           initial={{ scale: 0 }}
           animate={{ scale: 1 }}
           transition={{ duration: 1 }}
-        />
+        >
+          <Image
+            src="/images/Nadia.JPG"
+            alt="Profil"
+            width={300}
+            height={300}
+            className="w-64 h-64 md:w-72 md:h-72 rounded-full object-cover shadow-lg"
+          />
+        </motion.div>
       </div>
-      
-      {/* Flèche pour descendre */} 
-      <a href="#About" style={{position: "absolute", bottom: "2rem", left: "50%", transform: "translateX(-50%)"}}>
-      <ArrowDown color="#9d3c7d" size={60} />
-      </a>
+
+      {/* Flèche pour descendre */}
+      <motion.div
+        animate={{ y: [0, 10, 0] }}
+        transition={{ repeat: Infinity, duration: 1.5 }}
+        className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
+      >
+        <a href="#About">
+          <ArrowDown color="#9d3c7d" size={60} />
+        </a>
+      </motion.div>
     </div>
   );
 }
-
-const styles: { [key: string]: CSSProperties } = {
-  header: {
-    position: "relative",
-    height: "100vh",
-    backgroundImage: "url('./images/PC-back.jpg')",
-    backgroundSize: "cover",
-    backgroundPosition: "center",
-    fontFamily: "'Poppins', sans-serif",
-    color: "#fff",
-  },
-  nav: {
-    position: "absolute",
-    top: 0,
-    width: "100%",
-    padding: "1rem",
-    zIndex: 10,
-  },
-  navList: {
-    display: "flex",
-    justifyContent: "center",
-    listStyleType: "none",
-    margin: 0,
-    padding: 0,
-  },
-  navItem: {
-    margin: "0 1rem",
-    textDecoration: "none",
-    color: "#fff",
-    fontSize: "1.2rem",
-    transition: "color 0.3s",
-  },
-  container: {
-    display: "flex",
-    justifyContent: "space-between",
-    alignItems: "center",
-    height: "100%",
-    padding: "0 5%",
-  },
-  textWrapper: {
-    textAlign: "left",
-  },
-  greeting: {
-    fontSize: "3rem",
-    fontWeight: "bold",
-    marginBottom: "1rem",
-  },
-  name: {
-    fontSize: "2.5rem",
-    fontWeight: "500",
-    marginBottom: "0.5rem",
-  },
-  title: {
-    fontSize: "2rem",
-    fontWeight: "400",
-    marginTop: "1rem",
-  },
-  highlight: {
-    color: "#9d3c7d",
-    fontWeight: "bold",
-  },
-  profileImage: {
-    width: "300px",
-    height: "300px",
-    borderRadius: "50%",
-    objectFit: "cover",
-    boxShadow: "0 4px 8px rgba(0, 0, 0, 0.2)",
-  },
-
-  /* RESPONSIVE DESIGN */
-  "@media (max-width: 1200px)": {
-    greeting: {
-      fontSize: "2.5rem",
-    },
-    name: {
-      fontSize: "2rem",
-    },
-    title: {
-      fontSize: "1.5rem",
-    },
-    profileImage: {
-      width: "250px",
-      height: "250px",
-    },
-  },
-  "@media (max-width: 768px)": {
-    container: {
-      flexDirection: "column",
-      textAlign: "center",
-    },
-    textWrapper: {
-      marginBottom: "2rem",
-    },
-    navItem: {
-      fontSize: "1rem",
-      margin: "0 0.5rem",
-    },
-    greeting: {
-      fontSize: "2rem",
-    },
-    name: {
-      fontSize: "1.8rem",
-    },
-    title: {
-      fontSize: "1.2rem",
-    },
-    profileImage: {
-      width: "200px",
-      height: "200px",
-    },
-  },
-  "@media (max-width: 480px)": {
-    container: {
-      flexDirection: "column-reverse", // Superpose texte en premier
-      alignItems: "center",
-      textAlign: "center",
-    },
-    textWrapper: {
-      marginBottom: "1.5rem",
-    },
-    nav: {
-      padding: "0.5rem",
-    },
-    navList: {
-      flexDirection: "column",
-    },
-    navItem: {
-      margin: "0.5rem 0",
-      fontSize: "0.9rem",
-    },
-    greeting: {
-      fontSize: "1.5rem",
-    },
-    name: {
-      fontSize: "1.5rem",
-    },
-    title: {
-      fontSize: "1rem",
-    },
-    profileImage: {
-      width: "150px",
-      height: "150px",
-    },
-  },
-};
