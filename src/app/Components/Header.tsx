@@ -20,13 +20,16 @@ export default function Header() {
   ];
 
   return (
-    <div className="relative h-screen bg-cover bg-center text-white header-bg">
+    <div className="relative h-screen bg-cover bg-center text-white flex flex-col header-bg">
+      {/* Navbar */}
       <Navbar />
+
       {/* Contenu principal */}
-      <div className="flex flex-col md:flex-row justify-between items-center h-full px-8 md:px-16">
+      <div className="flex flex-col md:flex-row items-center justify-center flex-grow px-8 md:px-16 mt-[-40px]">
+        
         {/* Texte d'accueil */}
-        <div className="text-left md:text-left">
-          <h1 className="text-3xl md:text-4xl font-bold mb-4">
+        <div className="text-center md:text-left md:w-1/2 space-y-1">
+          <h1 className="text-3xl md:text-4xl font-bold">
             <Typewriter
               words={greetings}
               loop={true}
@@ -39,7 +42,7 @@ export default function Header() {
           </h1>
 
           <motion.h2
-            className="text-2xl md:text-3xl font-semibold mb-2"
+            className="text-2xl md:text-3xl font-semibold"
             initial={{ x: -200, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 1 }}
@@ -48,7 +51,7 @@ export default function Header() {
           </motion.h2>
 
           <motion.h3
-            className="text-xl md:text-2xl font-medium mt-2"
+            className="text-xl md:text-2xl font-medium"
             initial={{ x: -200, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 1.5 }}
@@ -62,13 +65,14 @@ export default function Header() {
           initial={{ scale: 0 }}
           animate={{ scale: 1 }}
           transition={{ duration: 1 }}
+          className="md:w-1/2 flex justify-center mt-4 md:mt-0"
         >
           <Image
             src="/images/Nadia.JPG"
             alt="Profil"
             width={300}
             height={300}
-            className="w-64 h-64 md:w-72 md:h-72 rounded-full object-cover shadow-lg"
+            className="w-40 h-40 md:w-56 md:h-56 lg:w-64 lg:h-64 rounded-full object-cover shadow-lg"
           />
         </motion.div>
       </div>
@@ -77,7 +81,7 @@ export default function Header() {
       <motion.div
         animate={{ y: [0, 10, 0] }}
         transition={{ repeat: Infinity, duration: 1.5 }}
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
+        className="absolute bottom-6 left-1/2 justify-center items-center text-center transform -translate-x-1/2"
       >
         <a href="#About">
           <ArrowDown color="#9d3c7d" size={60} />
