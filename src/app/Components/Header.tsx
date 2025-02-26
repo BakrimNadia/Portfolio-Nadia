@@ -25,10 +25,10 @@ export default function Header() {
       <Navbar />
 
       {/* Contenu principal */}
-      <div className="flex flex-col md:flex-row items-center justify-center flex-grow px-8 md:px-16 mt-[-40px]">
+      <div className="flex flex-col md:flex-row items-center justify-center flex-grow px-8 md:px-16">
         
         {/* Texte d'accueil */}
-        <div className="text-center md:text-left md:w-1/2 space-y-1">
+        <div className="text-center mb-4 text-gray-800 md:text-left md:w-1/2 space-y-1">
           <h1 className="text-3xl md:text-4xl font-bold">
             <Typewriter
               words={greetings}
@@ -81,7 +81,7 @@ export default function Header() {
       <motion.div
         animate={{ y: [0, 10, 0] }}
         transition={{ repeat: Infinity, duration: 1.5 }}
-        className="absolute bottom-6 left-1/2 justify-center items-center text-center transform -translate-x-1/2"
+        className="absolute bottom-6 right-1/2 justify-center items-center text-center transform -translate-x-1/2"
       >
         <a href="#About">
           <ArrowDown color="#9d3c7d" size={60} />

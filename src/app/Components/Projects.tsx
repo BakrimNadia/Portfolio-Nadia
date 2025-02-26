@@ -42,7 +42,7 @@ const callouts = [
     return (
       <div
       id="Projects">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-gray-100">
           <h2 className="text-5xl font-extrabold text-center relative p-3 mb-4 gradient-text">
           Mes Projets
           </h2>
@@ -54,15 +54,15 @@ const callouts = [
                   <img
                     alt={callout.imageAlt}
                     src={callout.imageSrc}
-                    className="w-full rounded-lg mt-2 object-cover group-hover:opacity-75 max-sm:h-80 sm:aspect-[2/1] lg:aspect-square transition-transform duration-300 hover:scale-110"
+                    className="w-full rounded-xl mt-2 object-cover group-hover:opacity-75 max-sm:h-80 sm:aspect-[2/1] lg:aspect-square transition-transform duration-300 hover:scale-110 drop-shadow-[0_0_10px_rgba(0,0,255,0.7)]"
                   />
-                  <h3 className="mt-6 text-sm text-gray-500">
+                  <h3 className="mt-6 text-sm text-white">
                     <a href={callout.href}>
-                      <span className="absolute inset-0" />
+                      <span className="absolute inset-0 text-xl " />
                       {callout.name}
                     </a>
                   </h3>
-                  <p className="text-base font-semibold text-gray-900">{callout.description}</p>
+                  <p className="text-base font-semibold text-gray-100">{callout.description}</p>
                 </div>
               ))}
             </div>
