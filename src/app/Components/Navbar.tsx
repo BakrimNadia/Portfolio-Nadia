@@ -30,16 +30,16 @@ export default function Navbar() {
           </button>
         </div>
         <PopoverGroup className="hidden lg:flex lg:gap-x-12">
-          <a href="#About" className="text-sm/6 font-semibold text-white hover:text-red-500">
+          <a href="#About" className="text-sm/6 font-semibold text-white hover:text-black">
             A PROPOS
             </a>
-          <a href="#Skills" className="text-sm/6 font-semibold text-white hover:text-red-500">
+          <a href="#Skills" className="text-sm/6 font-semibold text-white hover:text-black">
             MES COMPETENCES
           </a>
-          <a href="#Projects" className="text-sm/6 font-semibold text-white hover:text-red-500">
+          <a href="#Projects" className="text-sm/6 font-semibold text-white hover:text-black">
             MES PROJETS
           </a>
-          <a href="#Contact" className="text-sm/6 font-semibold text-white hover:text-red-500">
+          <a href="#Contact" className="text-sm/6 font-semibold text-white hover:text-black">
             CONTACT
           </a>
         </PopoverGroup>

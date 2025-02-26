@@ -84,7 +84,7 @@ export default function Header() {
         className="absolute bottom-6 right-1/2 justify-center items-center text-center transform -translate-x-1/2"
       >
         <a href="#About">
-          <ArrowDown color="#9d3c7d" size={60} />
+          <ArrowDown color="black" size={60} />
         </a>
       </motion.div>
     </div>
