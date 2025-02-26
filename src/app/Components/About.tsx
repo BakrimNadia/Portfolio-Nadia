@@ -12,7 +12,7 @@ export default function About() {
       <h1 className="text-5xl font-extrabold text-center relative inline-block p-3 mb-4 gradient-text">
           Mon Portfolio
       </h1>
-      <h2 className="mb-10 text-2xl font-bold text-white">À propos de moi</h2>
+      <h2 className="mb-10 text-2xl font-bold text-white animate-bounce text-rose-500">À propos de moi</h2>
 
       {/* Contenu des cadres */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-6xl w-full mb-5">
