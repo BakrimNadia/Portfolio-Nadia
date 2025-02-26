@@ -43,9 +43,11 @@ const callouts = [
       <div
       id="Projects">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <h2 className="text-5xl font-extrabold text-center relative p-3 mb-4 gradient-text">
+          Mes Projets
+          </h2>
           <div className="mx-auto max-w-2xl py-16 sm:py-24 lg:max-w-none lg:py-32">
-            <h2 className="text-4xl font-bold text-center text-blue-600 text-opacity-80">Mes projets</h2>
-  
+          
             <div className="mt-6 space-y-12 lg:grid lg:grid-cols-3 lg:gap-x-6 lg:space-y-0">
               {callouts.map((callout) => (
                 <div key={callout.name} className="group relative">

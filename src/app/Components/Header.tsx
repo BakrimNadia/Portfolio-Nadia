@@ -20,7 +20,7 @@ export default function Header() {
   ];
 
   return (
-    <div className="relative h-screen bg-cover bg-center text-white flex flex-col header-bg">
+    <div className="relative h-screen bg-cover bg-center flex flex-col header-bg">
       {/* Navbar */}
       <Navbar />
 
@@ -47,7 +47,7 @@ export default function Header() {
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 1 }}
           >
-            Je m&apos;appelle <span className="text-primary font-bold">Nadia</span>
+            Je m&apos;appelle <span className="gradient-text font-bold">Nadia</span>
           </motion.h2>
 
           <motion.h3
@@ -56,7 +56,7 @@ export default function Header() {
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 1.5 }}
           >
-            Développeuse Web <span className="text-primary font-bold">Full Stack</span>
+            Développeuse Web <span className="gradient-text font-bold">Full Stack Javascript / React.js / Next.js</span>
           </motion.h3>
         </div>
 

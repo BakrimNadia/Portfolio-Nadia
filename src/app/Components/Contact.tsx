@@ -19,7 +19,9 @@ export default function Contact() {
         />
       </div>
       <div className="mx-auto max-w-2xl text-center">
-        <h2 className="text-balance text-4xl font-bold text-center text-blue-600 text-opacity-80 tracking-tight sm:text-5xl">Contactez-moi</h2>
+      <h2 className="text-5xl font-extrabold text-center relative inline-block p-3 mb-4 gradient-text">
+          Contactez-moi
+      </h2>
       </div>
       <form action="#" method="POST" className="mx-auto mt-16 max-w-xl sm:mt-20">
         <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">

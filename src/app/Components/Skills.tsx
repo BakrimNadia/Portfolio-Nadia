@@ -1,6 +1,5 @@
 import { NeonGradientCard } from "@/components/ui/neon-gradient-card";
 import { IconCloud } from "../../components/ui/icon-cloud";
-import { TypingAnimation } from "@/components/magicui/typing-animation";
 
 const slugs = [
   "typescript",
@@ -41,10 +40,10 @@ export function Skills() {
   );
 
   return (
-    <div id="Skills" className="asap-unique container mx-auto px-4 py-12">
-       <TypingAnimation className="text-3xl font-bold text-rose-800 text-center">
-            Mes Compétences
-          </TypingAnimation>
+    <div id="Skills" className="container mx-auto px-4 py-12">
+       <h2 className="text-5xl font-extrabold text-center relative p-3 mb-4 gradient-text">
+          Mes compétences
+      </h2>
     <div className="relative flex size-full max-w-lg items-center justify-center overflow-hidden rounded-lg mx-auto p-6">
       <IconCloud images={images} />
     </div>

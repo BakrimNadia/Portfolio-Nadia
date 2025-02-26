@@ -7,11 +7,6 @@
   background-image: url("/images/PC-back.jpg");
 }
 
-/* Ajout d'une couleur personnalisée */
-.text-primary {
-  color: #9d3c7d;
-}
-
 /* Animation du dégradé du body */
 body {
   margin: 0;
@@ -23,6 +18,27 @@ body {
   display: flex;
   flex-direction: column;
   animation: gradient-animation 10s ease infinite;
+}
+
+/* Animation du dégradé du texte */
+.gradient-text {
+  background: linear-gradient(90deg, rgb(80, 160, 246), rgb(248, 62, 174), rgb(237, 210, 92) );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% 200%;
+  animation: gradientAnimation 3s infinite;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 /* Animation de fond */
@@ -71,4 +87,18 @@ body {
 
 
 
-@layer base {}
+@layer base {
+  :root {
+    --color-1: 0 100% 63%;
+    --color-2: 270 100% 63%;
+    --color-3: 210 100% 63%;
+    --color-4: 195 100% 63%;
+    --color-5: 90 100% 63%;
+  }
+  .dark {
+    --color-1: 0 100% 63%;
+    --color-2: 270 100% 63%;
+    --color-3: 210 100% 63%;
+    --color-4: 195 100% 63%;
+    --color-5: 90 100% 63%;
+  }}

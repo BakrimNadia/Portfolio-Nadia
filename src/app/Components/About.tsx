@@ -9,10 +9,10 @@ export default function About() {
       id="About"
       className="relative flex flex-col items-center justify-start min-h-screen bg-cover bg-center p-4">
       {/* Titre principal */}
-      <h1 className="text-4xl font-bold mb-8 text-center text-rose-500 text-opacity-80 px-6 py-3">
-      Bienvenue sur mon Portfolio
+      <h1 className="text-5xl font-extrabold text-center relative inline-block p-3 mb-4 gradient-text">
+          Mon Portfolio
       </h1>
-      <h2 className="mb-10 text-2xl font-bold text-gray-900">À propos de moi</h2>
+      <h2 className="mb-10 text-2xl font-bold text-white">À propos de moi</h2>
 
       {/* Contenu des cadres */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-6xl w-full mb-5">
