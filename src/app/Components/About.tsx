@@ -2,18 +2,7 @@
 
 import { NeonGradientCard } from "@/components/ui/neon-gradient-card";
 import React from "react";
-import {
-  AccordionItem,
-  AccordionItemContent,
-  AccordionItemTrigger,
-  AccordionRoot,
-} from "../../components/ui/accordion";
 
-const items = [
-  { value: "a", title: "First Item", text: "Some value 1..." },
-  { value: "b", title: "Second Item", text: "Some value 2..." },
-  { value: "c", title: "Third Item", text: "Some value 3..." },
-]
 
 export default function About() {
   return (
@@ -33,18 +22,7 @@ export default function About() {
           className="p-8 "
         >
             <NeonGradientCard className="max-w-sm items-center justify-center text-center transform transition-all duration-500 hover:scale-105">
-              <span className="pointer-events-none z-10 h-full whitespace-pre-wrap bg-gradient-to-br from-[#ff2975] from-35% to-[#00FFF1] bg-clip-text text-center text-xl leading-none tracking-tighter dark:drop-shadow-[0_5px_5px_rgba(0,0,0,0.8)]">
-              
-              <AccordionRoot collapsible defaultValue={["b"]}>
-      {items.map((item, index) => (
-        <AccordionItem key={index} value={item.value}>
-          <AccordionItemTrigger>{item.title}</AccordionItemTrigger>
-          <AccordionItemContent>{item.text}</AccordionItemContent>
-        </AccordionItem>
-      ))}
-    </AccordionRoot>
-              
-              
+              <span className="pointer-events-none z-10 h-full whitespace-pre-wrap bg-gradient-to-br from-[#ff2975] from-35% to-[#00FFF1] bg-clip-text text-center text-xl leading-none tracking-tighter dark:drop-shadow-[0_5px_5px_rgba(0,0,0,0.8)]">              
               <p className="text-lg leading-relaxed text-justify">
                     Issue d’un cursus universitaire Licence en AES (Administration Économique et Sociale) spécialisée en management, j’ai commencé ma carrière professionnelle dans des secteurs aussi dynamiques que la grande distribution et le transport. Ces expériences m’ont permis de développer des compétences en gestion, en organisation, et en relation client, tout en cultivant une rigueur et une capacité d’adaptation précieuses.
                     <br />

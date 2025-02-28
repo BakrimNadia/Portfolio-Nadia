@@ -28,7 +28,7 @@ export default function Header() {
       <div className="flex flex-col md:flex-row items-center justify-center flex-grow px-8 md:px-16">
         
         {/* Texte d'accueil */}
-        <div className="text-center mb-4 text-gray-800 md:text-left md:w-1/2 space-y-1">
+        <div className="text-center mb-4 text-white md:text-left md:w-1/2 space-y-1">
           <h1 className="text-3xl md:text-4xl font-bold">
             <Typewriter
               words={greetings}
@@ -84,7 +84,7 @@ export default function Header() {
         className="absolute bottom-6 right-1/2 justify-center items-center text-center transform -translate-x-1/2"
       >
         <a href="#About">
-          <ArrowDown color="black" size={60} />
+          <ArrowDown color="white" size={60} />
         </a>
       </motion.div>
     </div>
