@@ -1,5 +1,6 @@
 import { NeonGradientCard } from "@/components/ui/neon-gradient-card";
 import { IconCloud } from "../../components/ui/icon-cloud";
+import MyFile from "./MyFile";
 
 const slugs = [
   "typescript",
@@ -113,6 +114,9 @@ export function Skills() {
             </ul>
             </NeonGradientCard> 
           </div>
+        </div>
+        <div className="flex flex-col gap-6 text-center mt-8">
+        <MyFile/>
         </div>
       </div>
   );
