@@ -5,7 +5,7 @@ import styled from 'styled-components';
 
 const Footer = () => {
     return(
-    <FooterContainer>
+    <FooterContainer className="font-mono">
       <IconsContainer>
         <IconLink
           href="https://www.linkedin.com/in/nadia-d-405849b9/"

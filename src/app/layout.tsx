@@ -1,6 +1,13 @@
 import type { Metadata } from "next";
 
 import "./globals.css";
+import { Fira_Code } from "next/font/google";
+
+const firaCode = Fira_Code({
+  subsets: ["latin"],
+  weight: ["400", "500", "700"], 
+  variable: "--font-fira-code", 
+});
 
 
 export const metadata: Metadata = {
@@ -14,7 +21,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html className={firaCode.variable} lang="en">
        <body>
         {children}
       </body>

@@ -42,7 +42,7 @@ const callouts = [
     return (
       <div
       id="Projects">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-gray-100">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-gray-100 font-mono">
           <h2 className="text-5xl font-extrabold text-center relative p-3 mb-4 gradient-text">
           Mes Projets
           </h2>
