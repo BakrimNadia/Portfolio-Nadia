@@ -1,9 +1,43 @@
 'use client'
 
 import { NeonGradientCard } from '@/components/ui/neon-gradient-card'
-import React from 'react'
+import React, { useState } from 'react'
 
 export default function Contact() {
+
+  const [formData, setFormData] = useState({
+    firstName: '',
+    lastName: '',
+    email: '',
+    company: '',
+    phoneNumber: '',
+    message: ''
+  });
+
+  const [status, setStatus] = useState<string | null>(null);
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setStatus('Envoi en cours...');
+
+    const response = await fetch('/api/SendEmail', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(formData),
+    });
+
+    if (response.ok) {
+      setStatus('Message envoyé avec succès !');
+      setFormData({ firstName: '', lastName: '', email: '', company: '', phoneNumber: '', message: '' });
+    } else {
+      setStatus('Erreur lors de l\'envoi du message.');
+    }
+  };
+
 
   return (
     <div id="Contact" className="isolate px-6 py-24 sm:py-32 lg:px-8 font-mono">
@@ -25,7 +59,7 @@ export default function Contact() {
       </h2>
       </div>
               <NeonGradientCard className="max-w-sm max-w-xl mx-auto items-center justify-center text-center transform transition-all duration-500 hover:scale-105">
-      <form action="#" method="POST" className="mx-auto mt-16 max-w-xl sm:mt-20">
+      <form onSubmit={handleSubmit} action="#" method="POST" className="mx-auto mt-16 max-w-xl sm:mt-20">
         <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
           <div>
             <label htmlFor="first-name" className="block text-sm/6 font-semibold text-white">
@@ -33,11 +67,14 @@ export default function Contact() {
             </label>
             <div className="mt-2.5">
               <input
+                required
                 id="first-name"
                 name="first-name"
                 type="text"
                 autoComplete="given-name"
                 className="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-rose-600"
+                value={formData.firstName} 
+                onChange={handleChange}
               />
             </div>
           </div>
@@ -47,11 +84,14 @@ export default function Contact() {
             </label>
             <div className="mt-2.5">
               <input
+                required
                 id="last-name"
                 name="last-name"
                 type="text"
                 autoComplete="family-name"
                 className="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-rose-600"
+                value={formData.lastName} 
+                onChange={handleChange}
               />
             </div>
           </div>
@@ -66,6 +106,8 @@ export default function Contact() {
                 type="text"
                 autoComplete="organization"
                 className="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-rose-600"
+                value={formData.company}
+                onChange={handleChange}
               />
             </div>
           </div>
@@ -75,11 +117,14 @@ export default function Contact() {
             </label>
             <div className="mt-2.5">
               <input
+                required
                 id="email"
                 name="email"
                 type="email"
                 autoComplete="email"
                 className="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-rose-600"
+                value={formData.email}
+                onChange={handleChange}
               />
             </div>
           </div>
@@ -95,6 +140,8 @@ export default function Contact() {
                   type="text"
                   placeholder=""
                   className="block min-w-0 grow py-1.5 pl-1 pr-3 text-base text-gray-900 placeholder:text-gray-400 focus:outline focus:outline-0 sm:text-sm/6"
+                  value={formData.phoneNumber}
+                  onChange={handleChange}
                 />
               </div>
             </div>
@@ -105,11 +152,13 @@ export default function Contact() {
             </label>
             <div className="mt-2.5">
               <textarea
+                required
                 id="message"
                 name="message"
                 rows={4}
                 className="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-rose-600"
-                defaultValue={''}
+                value={formData.message}
+                onChange={handleChange}
               />
             </div>
           </div>
@@ -121,6 +170,7 @@ export default function Contact() {
           >
             Envoyer
           </button>
+          {status && <p>{status}</p>}
         </div>
       </form>
       </NeonGradientCard>
