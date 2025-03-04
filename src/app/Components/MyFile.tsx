@@ -1,6 +1,6 @@
 export default function MyFile() {
     const handleOpenPDF = () => {
-      window.open("/docs/CV-DI-ROSSO-BAKRIM-NADIA1.pdf", "_blank");
+      window.open("/doc/CV-DI-ROSSO-BAKRIM-NADIA1.pdf", "_blank");
     };
   
     return (
