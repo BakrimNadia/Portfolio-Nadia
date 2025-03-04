@@ -8,7 +8,7 @@ export default function About() {
   return (
     <div
       id="About"
-      className="relative flex flex-col items-center justify-start min-h-screen bg-cover bg-center p-4 font-mono">
+      className="relative flex flex-col items-center justify-center min-h-screen bg-cover bg-center p-4 font-mono">
       {/* Titre principal */}
       <h1 className="text-5xl font-extrabold text-center relative inline-block p-3 mb-4 gradient-text">
           Mon Portfolio

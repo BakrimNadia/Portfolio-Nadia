@@ -30,7 +30,6 @@ const Footer = () => {
 )};
 
 const FooterContainer = styled.footer`
-  background-color: #1a1a1a;
   color: #fff;
   text-align: center;
   padding: 20px 0;
