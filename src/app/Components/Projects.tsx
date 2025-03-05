@@ -5,7 +5,7 @@ import Anim from "./Anim";
 const callouts = [
     {
       name: 'Fur-ever-home',
-      description: 'Projet Full Stack en équipe - rôle scrum master - technologies utilisées : Front-end : React.js Next.js Next UI - Back-end : Node.js Express.js - Base de données : PostgreSQL - Déploiement : Vercel - Gestion de projet : Trello - Communication : Discord - Méthode agile : Scrum',
+      description: 'Projet Full Stack en équipe - rôle scrum master - technologies utilisées : Front-end : React.js Next.js Next UI - Back-end : Node.js Express.js - Base de données : PostgreSQL - Déploiement : Vercel - Méthode agile : Scrum',
       imageSrc: '/images/fureverhome.png',
       imageAlt: 'Site Full stack pour gestion de refuge animalier.',
       href: 'https://projet-fur-ever-home-front.vercel.app/',
@@ -67,14 +67,14 @@ const callouts = [
                   </h3>
                   <p className="mb-10 text-base font-semibold text-gray-100">{callout.description}</p>
                   <button>
-                    <a href={callout.href
-                    } className="px-2 pt-3 mt-3 mx-2 mb-3 item-center bg-gradient-to-r from-blue-400 to-rose-400 hover:bg-white hover:text-gray-600 font-bold py-2 px-4 rounded-lg">
+                    <a href={callout.href} 
+                    className="px-2 pt-3 mt-3 mx-2 mb-3 item-center bg-rose-400 rounded-xl hover:bg-white hover:text-gray-600 font-bold py-2 px-4 rounded-lg">
                       Voir le site 
                     </a>
                   </button>
                   <button>
-                    <a href={callout.href
-                    } className="px-2 pt-3 mt-3 mx-2 mb-3 bg-gradient-to-r from-blue-400 to-rose-400 hover:bg-white hover:text-gray-600 font-bold py-2 px-4 rounded-lg">
+                    <a href={callout.href}
+                     className="px-2 pt-3 mt-3 mx-2 mb-3 bg-rose-400 rounded-xl hover:bg-white hover:text-gray-600 font-bold py-2 px-4 rounded-lg">
                       github
                     </a>
                   </button>
