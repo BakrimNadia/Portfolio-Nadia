@@ -36,6 +36,13 @@ const slugs = [
   "figma",
 ];
 
+const scrollToSkills = () => {
+  const section = document.getElementById("Skills");
+  if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+  }
+};
+
 export function Skills() {
   const images = slugs.map(
     (slug) => `https://cdn.simpleicons.org/${slug}/${slug}`,
@@ -43,7 +50,8 @@ export function Skills() {
 
   return (
     <div id="Skills" className="container mx-auto px-4 py-12 font-mono">
-       <h2 className="text-5xl font-extrabold text-center relative p-3 mb-4 gradient-text">
+       <h2 className="text-5xl font-extrabold text-center relative p-3 mb-4 gradient-text"
+          onMouseEnter={scrollToSkills}>
           Mes compétences
       </h2>
     <div className="relative flex size-full max-w-lg items-center justify-center overflow-hidden rounded-lg mx-auto p-6">
