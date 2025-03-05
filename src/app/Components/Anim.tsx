@@ -2,6 +2,14 @@
 import * as motion from "motion/react-client"
 
 export default function Anim() {
+
+    const scrollToProjects = () => {
+        const section = document.getElementById("Projects");
+        if (section) {
+            section.scrollIntoView({ behavior: "smooth" });
+        }
+    };
+
     return (
 
         <motion.div
@@ -18,6 +26,7 @@ export default function Anim() {
                 repeatDelay: 1,
             }}
             style={box}
+            onMouseEnter={scrollToProjects}
         />
     )
 }
