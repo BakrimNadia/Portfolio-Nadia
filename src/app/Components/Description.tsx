@@ -6,10 +6,10 @@ const Accordion = ({ title, content }: { title: string; content: string }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="border-b border-gray-300">
+    <div className="border-b border-blue-500">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="w-full flex justify-between items-center text-white p-4 text-left font-medium"
+        className="w-full flex justify-between items-center text-blue-500 p-4 text-left font-medium"
       >
         {title}
         {isOpen ? <ChevronUp size={20} /> : <ChevronDown size={20} />}
@@ -20,7 +20,7 @@ const Accordion = ({ title, content }: { title: string; content: string }) => {
         transition={{ duration: 0.3, ease: "easeInOut" }}
         className="overflow-hidden px-4"
       >
-        <p className="py-2 text-blue-400">{content}</p>
+        <p className="py-2 text-pink-400">{content}</p>
       </motion.div>
     </div>
   );

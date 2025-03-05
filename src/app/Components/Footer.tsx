@@ -1,6 +1,6 @@
 // components/Footer.js
 import React from 'react';
-import { FaLinkedin, FaGithub, FaEnvelope } from 'react-icons/fa';
+import { FaLinkedin, FaGithub } from 'react-icons/fa';
 import styled from 'styled-components';
 
 const Footer = () => {
@@ -20,9 +20,6 @@ const Footer = () => {
           rel="noopener noreferrer"
         >
           <FaGithub size={30} />
-        </IconLink>
-        <IconLink href="nadiabakrim06@gmail.com">
-          <FaEnvelope size={30} />
         </IconLink>
       </IconsContainer>
       <Text>© 2025 - Tous drois réservés</Text>

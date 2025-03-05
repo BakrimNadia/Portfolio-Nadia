@@ -70,25 +70,25 @@ export default function Navbar() {
               <div className="space-y-2 py-6 px-2">
                 <a
                   href="#About"
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:text-red-500"
+                  className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:text-rose-500"
                 >
                     A PROPOS
                 </a>
                 <a
                   href="#Skills"
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white  hover:text-red-500"
+                  className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white  hover:text-rose-500"
                 >
                   COMPETENCES
                 </a>
                 <a
                   href="#Projects"
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white  hover:text-red-500"
+                  className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white  hover:text-rose-500"
                 >
                   MES PROJETS
                 </a>
                 <a
                   href="#Contact"
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white  hover:text-red-500"
+                  className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white  hover:text-rose-500"
                 >
                   CONTACT
                 </a>
