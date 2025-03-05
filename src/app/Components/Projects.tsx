@@ -1,5 +1,7 @@
 'use client';
 
+import Anim from "./Anim";
+
 const callouts = [
     {
       name: 'Fur-ever-home',
@@ -46,6 +48,9 @@ const callouts = [
           <h2 className="text-5xl font-extrabold text-center relative p-3 mb-4 gradient-text">
           Mes Projets
           </h2>
+          <div className="relative flex size-full max-w-lg items-center justify-center overflow-hidden rounded-lg mx-auto p-6">
+          <Anim />
+          </div>
           <div className="mx-auto max-w-2xl py-16 sm:py-24 lg:max-w-none lg:py-32">
           
             <div className="mt-3 space-y-12 lg:grid lg:grid-cols-3 lg:gap-x-6 lg:space-y-0">
