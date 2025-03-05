@@ -1,6 +1,7 @@
 import { NeonGradientCard } from "@/components/ui/neon-gradient-card";
 import { IconCloud } from "../../components/ui/icon-cloud";
 import MyFile from "./MyFile";
+import Description from "./Description";
 
 const slugs = [
   "typescript",
@@ -118,6 +119,12 @@ export function Skills() {
         <div className="flex flex-col gap-6 text-center mt-8">
         <MyFile/>
         </div>
+        <div className="mx-auto max-w-2xl text-center">
+      <h2 className="mt-10 text-5xl font-extrabold text-center relative inline-block p-3 mb-10 gradient-text">
+          Mon savoir-faire
+      </h2>
+      </div>
+        <Description  />
       </div>
   );
 };

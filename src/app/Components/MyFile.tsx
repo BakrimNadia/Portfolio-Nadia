@@ -4,7 +4,7 @@ export default function MyFile() {
     };
   
     return (
-      <button onClick={handleOpenPDF} className="p-2 bg-gradient-to-r from-blue-400 to-rose-400 text-white rounded">
+      <button onClick={handleOpenPDF} className="p-2 mx-auto px-10 mt-10 bg-gradient-to-r from-blue-400 to-rose-400  text-white hover:text-gray-600 rounded">
         Voir mon CV
       </button>
     );
