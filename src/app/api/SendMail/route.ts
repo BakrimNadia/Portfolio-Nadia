@@ -14,6 +14,11 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ message: 'Veuillez remplir tous les champs obligatoires' }, { status: 400 });
     }
 
+    if (!emailUser || !emailPass) {
+      console.error('Les variables d\'environnement ne sont pas définies');
+      return NextResponse.json({ message: 'Erreur de configuration du serveur' }, { status: 500 });
+    }
+
     // Configuration du transporteur SMTP (Gmail)
     const transporter = nodemailer.createTransport({
       service: 'gmail',
