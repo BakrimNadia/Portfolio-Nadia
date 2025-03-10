@@ -39,13 +39,21 @@ const callouts = [
       href: 'https://dressing-shop-one.vercel.app/',
     },
   ]
+
+  const scrollToProjects = () => {
+    const section = document.getElementById("Projects");
+    if (section) {
+        section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
   
   export default function Projects() {
     return (
       <div
       id="Projects">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-gray-100 font-mono">
-          <h2 className="text-5xl font-extrabold text-center relative p-3 mb-4 gradient-text">
+          <h2 className="text-5xl font-extrabold text-center relative p-3 mb-4 gradient-text"
+            onMouseEnter={scrollToProjects}>
           Mes Projets
           </h2>
           <div className="relative flex size-full max-w-lg items-center justify-center overflow-hidden rounded-lg mx-auto p-6">

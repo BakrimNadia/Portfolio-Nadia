@@ -43,6 +43,13 @@ const scrollToSkills = () => {
   }
 };
 
+const scrollToKnowledge = () => {
+  const section = document.getElementById("Knowledge");
+  if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+  }
+};
+
 export function Skills() {
   const images = slugs.map(
     (slug) => `https://cdn.simpleicons.org/${slug}/${slug}`,
@@ -128,7 +135,8 @@ export function Skills() {
         <MyFile/>
         </div>
         <div className="mx-auto max-w-2xl text-center">
-      <h2 className="mt-10 text-5xl font-extrabold text-center relative inline-block p-3 mb-10 gradient-text">
+      <h2 id="Knowledge" className="mt-10 text-5xl font-extrabold text-center relative inline-block p-3 mb-10 gradient-text"
+          onMouseEnter={scrollToKnowledge}>
           Mon savoir-faire
       </h2>
       </div>

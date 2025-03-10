@@ -43,6 +43,13 @@ export default function Contact() {
     }
   };
 
+  const scrollToContact = () => {
+    const section = document.getElementById("Contact");
+    if (section) {
+        section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
 
   return (
     <div id="Contact" className="isolate px-6 py-24 sm:py-32 lg:px-8 font-mono">
@@ -52,7 +59,8 @@ export default function Contact() {
       >
       </div>
       <div className="mx-auto max-w-2xl text-center">
-      <h2 className="text-5xl font-extrabold text-center relative inline-block p-3 mb-10 gradient-text">
+      <h2 className="text-5xl font-extrabold text-center relative inline-block p-3 mb-10 gradient-text"
+        onMouseEnter={scrollToContact}>
           Contactez-moi
       </h2>
       </div>

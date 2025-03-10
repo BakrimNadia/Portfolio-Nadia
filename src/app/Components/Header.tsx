@@ -19,6 +19,13 @@ export default function Header() {
     "مرحبًا",
   ];
 
+  const scrollToAbout = () => {
+    const section = document.getElementById("About");
+    if (section) {
+        section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <div className="relative h-screen bg-cover bg-center flex flex-col header-bg font-mono">
       {/* Navbar */}
@@ -83,8 +90,8 @@ export default function Header() {
         transition={{ repeat: Infinity, duration: 1.5 }}
         className="absolute bottom-4 left-[calc(50%-16px)] justify-center items-center text-center transform -translate-x-1/2"
       >
-        <a href="#About">
-          <ArrowDown color="white" size={60} />
+        <a href="#About" >
+          <ArrowDown onMouseEnter={scrollToAbout} color="white" size={60} />
         </a>
       </motion.div>
     </div>
