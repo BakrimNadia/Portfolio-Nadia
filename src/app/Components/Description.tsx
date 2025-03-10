@@ -6,10 +6,10 @@ const Accordion = ({ title, content }: { title: string; content: string }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="border-b border-blue-500">
+    <div className="border-b bg-gradient-to-r from-pink-500 via-yellow-200 to-blue-500 bg-clip-text text-transparent">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="w-full flex justify-between items-center text-blue-500 p-4 text-left font-medium"
+        className="w-full flex justify-between items-center p-4 text-left font-medium"
       >
         {title}
         {isOpen ? <ChevronUp size={20} /> : <ChevronDown size={20} />}
@@ -20,7 +20,7 @@ const Accordion = ({ title, content }: { title: string; content: string }) => {
         transition={{ duration: 0.3, ease: "easeInOut" }}
         className="overflow-hidden px-4"
       >
-        <p className="py-2 text-pink-400">{content}</p>
+        <p className="py-2 bg-gradient-to-r from-pink-500 via-yellow-200 to-blue-500 bg-clip-text text-transparent">{content}</p>
       </motion.div>
     </div>
   );
@@ -28,7 +28,7 @@ const Accordion = ({ title, content }: { title: string; content: string }) => {
 
 export default function Description() {
   return (
-    <div className="max-w-lg mx-auto mt-10 space-y-4 text-justify">
+    <div className="max-w-lg mx-auto mt-10 space-y-4  text-justify">
       <Accordion title="Développement Front-End" content="Création d’interfaces modernes et performantes avec React, Next.js et Tailwind CSS, tout en optimisant le rendu, le SEO et l’accessibilité." />
       <Accordion title=" Développement Back-End" content="Conception d’API sécurisées avec Node.js et Express, gestion des bases de données relationnelles avec PostgreSQL et Sequelize, et mise en place d’authentification sécurisée." />
       <Accordion title="Tests et Qualité de Code" content="Réalisation de tests unitaires avec Mocha & Chai, validation des routes API avec Insomnia, et maintien d’un code propre grâce à ESLint et Prettier." />
