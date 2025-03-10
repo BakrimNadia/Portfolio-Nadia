@@ -8,9 +8,9 @@ export default function About() {
   return (
     <div
       id="About"
-      className="relative flex flex-col items-center justify-center min-h-screen bg-center p-4 font-mono">
+      className="relative flex flex-col items-center justify-center min-h-screen bg-center font-mono">
       {/* Titre principal */}
-      <h1 className="text-5xl font-extrabold text-center relative inline-block p-3 mb-4 gradient-text">
+      <h1 className="text-5xl font-extrabold text-center relative inline-block mb-4 gradient-text">
           Mon Portfolio
       </h1>
       <h2 className="mb-10 text-2xl font-bold text-white animate-bounce text-rose-500">À propos de moi</h2>
@@ -23,7 +23,7 @@ export default function About() {
         >
             <NeonGradientCard className="max-w-sm items-center justify-center text-center transform transition-all duration-500 hover:scale-105">
               <span className="pointer-events-none z-10 h-full whitespace-pre-wrap bg-gradient-to-br from-[#ff2975] from-35% to-[#00FFF1] bg-clip-text text-center text-xl leading-none tracking-tighter dark:drop-shadow-[0_5px_5px_rgba(0,0,0,0.8)]">              
-              <p className="text-lg font-mono font-medium text-justify">
+              <p className="text-lg font-mono bg-gradient-to-r from-pink-500 to-blue-500 bg-clip-text text-transparent font-medium text-justify">
                     Issue d’un cursus universitaire Licence en AES (Administration Économique et Sociale) spécialisée en management, j’ai commencé ma carrière professionnelle dans des secteurs aussi dynamiques que la grande distribution et le transport. Ces expériences m’ont permis de développer des compétences en gestion, en organisation, et en relation client, tout en cultivant une rigueur et une capacité d’adaptation précieuses.
                     <br />
                     <br />
@@ -43,7 +43,7 @@ export default function About() {
 
 <NeonGradientCard className="max-w-sm items-center justify-center text-center transform transition-all duration-500 hover:scale-105">
       <span className="pointer-events-none z-10 h-full whitespace-pre-wrap bg-gradient-to-br from-[#ff2975] from-35% to-[#00FFF1] bg-clip-text text-center text-xl leading-none tracking-tighter dark:drop-shadow-[0_5px_5px_rgba(0,0,0,0.8)]">
-      <p className="text-lg font-mono font-medium text-justify">
+      <p className="text-lg font-mono bg-gradient-to-r from-pink-500 to-blue-500 bg-clip-text text-transparent font-medium text-justify">
             En parallèle de cette formation, je me suis également investie en autodidacte pour approfondir mes connaissances. Je me suis formée à des frameworks modernes, à des outils de design comme Figma et Canva, et j’ai exploré des méthodologies et pratiques qui enrichissent mes compétences en conception et développement de projets web.
             <br />
             <br />

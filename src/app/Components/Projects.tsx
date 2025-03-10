@@ -13,7 +13,7 @@ const callouts = [
     {
       name: 'Gazette des collègues',
       description: 'Projet Full Stack réalisé seule - technologies utilisées : Front-end : React.js Next.js - Tailwind Next Ui - Back-end : Node.js Express.js - Base de données : PostgreSQL - Déploiement : Vercel',
-      imageSrc: '/images/gazette.png',
+      imageSrc: '/images/gazette1.png',
       imageAlt: 'Site full stack gazette d entreprise.',
       href: 'https://gazette-des-collegues.vercel.app/',
     },
@@ -76,13 +76,13 @@ const callouts = [
                   <p className="mb-10 text-base font-semibold text-gray-100">{callout.description}</p>
                   <button>
                     <a href={callout.href} 
-                    className="px-2 pt-3 mt-3 mx-2 mb-3 item-center bg-rose-400 rounded-xl hover:bg-white hover:text-gray-600 font-bold py-2 px-4 rounded-lg">
+                    className="px-2 pt-3 mt-3 mx-2 mb-3 item-center bg-gradient-to-b from-rose-400 to-blue-500 rounded-xl text-black hover:bg-white hover:text-gray-100 font-bold py-2 px-4 rounded-lg">
                       Voir le site 
                     </a>
                   </button>
                   <button>
                     <a href={callout.href}
-                     className="px-2 pt-3 mt-3 mx-2 mb-3 bg-rose-400 rounded-xl hover:bg-white hover:text-gray-600 font-bold py-2 px-4 rounded-lg">
+                     className="px-2 pt-3 mt-3 mx-2 mb-3 bg-gradient-to-b from-rose-400 to-blue-500 rounded-xl text-black hover:bg-white hover:text-gray-100 font-bold py-2 px-4 rounded-lg">
                       github
                     </a>
                   </button>

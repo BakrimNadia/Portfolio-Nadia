@@ -172,7 +172,7 @@ export default function Contact() {
         <div className="mt-10">
           <button
             type="submit"
-            className="block w-full rounded-md bg-gradient-to-r from-blue-400 to-rose-400 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-rose-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-rose-600"
+            className="block w-full rounded-xl bg-gradient-to-b from-rose-400 to-blue-500 tex-black px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-rose-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-rose-600"
           >
             Envoyer
           </button>
