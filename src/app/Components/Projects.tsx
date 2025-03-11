@@ -63,17 +63,18 @@ const callouts = [
           
             <div className="mt-3 space-y-12 lg:grid lg:grid-cols-3 lg:gap-x-6 lg:space-y-0">
               {callouts.map((callout) => (
-                <div key={callout.name} className="group relative">
+                <div key={callout.name} className="group">
                   <img
                     alt={callout.imageAlt}
                     src={callout.imageSrc}
-                    className="w-full rounded-xl mt-4 object-cover group-hover:opacity-75 max-sm:h-80 sm:aspect-[2/1] lg:aspect-square transition-transform duration-300 hover:scale-110 drop-shadow-[0_0_10px_rgba(0,0,255,0.7)]"
+                    className="w-full rounded-xl mt-4 object-cover group-hover:opacity-75  max-sm:h-80 sm:aspect-[2/1] lg:aspect-square transition-transform duration-300 hover:scale-110 drop-shadow-[0_0_10px_rgba(0,0,255,0.7)]"
                   />
-                  <h3 className="mt-6 text-sm text-white">
+                  <h3 className="mt-6 text-xl bg-gradient-to-r from-pink-500 to-blue-500 bg-clip-text text-transparent font-bold text-center">
                       <span className="absolute inset-0 text-xl " />
                       {callout.name}
                   </h3>
-                  <p className="mb-10 text-base font-semibold text-gray-100">{callout.description}</p>
+                  <p className="mb-10 text-base font-semibold bg-gradient-to-r from-pink-500 to-blue-500 bg-clip-text text-transparent text-center">{callout.description}</p>
+                  <div className="flex justify-center space-x-4 mb-2">
                   <button>
                     <a href={callout.href} 
                     className="px-2 pt-3 mt-3 mx-2 mb-3 item-center bg-gradient-to-b from-rose-400 to-blue-500 rounded-xl text-black hover:bg-white hover:text-gray-100 font-bold py-2 px-4 rounded-lg">
@@ -86,6 +87,7 @@ const callouts = [
                       github
                     </a>
                   </button>
+                  </div>
                 </div>
               ))}
             </div>

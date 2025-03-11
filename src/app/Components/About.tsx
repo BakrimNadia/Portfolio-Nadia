@@ -3,6 +3,12 @@
 import { NeonGradientCard } from "@/components/ui/neon-gradient-card";
 import React from "react";
 
+const scrollToAbout = () => {
+  const section = document.getElementById("About");
+  if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+  }
+};
 
 export default function About() {
   return (
@@ -10,7 +16,8 @@ export default function About() {
       id="About"
       className="relative flex flex-col items-center justify-center min-h-screen bg-center font-mono">
       {/* Titre principal */}
-      <h1 className="text-5xl mt-10 font-extrabold text-center relative inline-block mb-4 gradient-text">
+      <h1 className="text-5xl mt-10 font-extrabold text-center relative inline-block mb-4 gradient-text"
+        onMouseEnter={scrollToAbout}>
           Mon Portfolio
       </h1>
       <h2 className="mb-10 text-2xl font-bold text-white animate-bounce text-rose-500">À propos de moi</h2>
