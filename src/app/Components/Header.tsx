@@ -19,6 +19,14 @@ export default function Header() {
     "مرحبًا",
   ];
 
+  const handleScroll = () => {
+    const aboutSection = document.getElementById("About");
+    if (aboutSection) {
+      aboutSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+  
+
   return (
     <div className="relative h-screen bg-cover bg-center flex flex-col header-bg font-mono">
       {/* Navbar */}
@@ -83,9 +91,9 @@ export default function Header() {
         transition={{ repeat: Infinity, duration: 1.5 }}
         className="absolute bottom-4 left-[calc(50%-16px)] justify-center items-center text-center transform -translate-x-1/2"
       >
-        <a href="#About" >
-          <ArrowDown color="white" size={60} />
-        </a>
+      <button onClick={handleScroll} title="Scroll down">
+    <ArrowDown color="white" size={60} />
+      </button>
       </motion.div>
     </div>
   );

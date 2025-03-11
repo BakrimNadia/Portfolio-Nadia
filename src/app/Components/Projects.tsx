@@ -9,6 +9,7 @@ const callouts = [
       imageSrc: '/images/fureverhome.png',
       imageAlt: 'Site Full stack pour gestion de refuge animalier.',
       href: 'https://projet-fur-ever-home-front.vercel.app/',
+      github:'https://github.com/O-clock-Muffin/projet-fur-ever-home-front',
     },
     {
       name: 'Gazette des collègues',
@@ -16,6 +17,7 @@ const callouts = [
       imageSrc: '/images/gazette1.png',
       imageAlt: 'Site full stack gazette d entreprise.',
       href: 'https://gazette-des-collegues.vercel.app/',
+      github:'https://github.com/BakrimNadia/Gazette-des-collegues',
     },
     {
       name: 'Nadia beauty',
@@ -23,6 +25,7 @@ const callouts = [
       imageSrc: '/images/beauty1.png',
       imageAlt: 'Site vitrine institut de beauté.',
       href: 'https://nadiabeauty.vercel.app/',
+      github:'https://github.com/BakrimNadia/myinstitut',
     },
     {
       name: 'Su Sushi',
@@ -30,6 +33,7 @@ const callouts = [
       imageSrc: '/images/su-sushi.png',
       imageAlt: 'Site vitrine de restaurant sushi.',
       href: 'https://su-sushi-bakrim-nadias-projects.vercel.app/',
+      github:'https://github.com/BakrimNadia/SU-SUSHI',
     },
     {
       name: 'Dress-shop',
@@ -37,6 +41,7 @@ const callouts = [
       imageSrc: '/images/dressing.png',
       imageAlt: 'Site demonstratif type e-commerce mode femme.',
       href: 'https://dressing-shop-one.vercel.app/',
+      github:'https://github.com/BakrimNadia/Dressing-shop',
     },
   ]
 
@@ -67,7 +72,7 @@ const callouts = [
                   <img
                     alt={callout.imageAlt}
                     src={callout.imageSrc}
-                    className="w-full rounded-xl mt-4 object-cover group-hover:opacity-75  max-sm:h-80 sm:aspect-[2/1] lg:aspect-square transition-transform duration-300 hover:scale-110 drop-shadow-[0_0_10px_rgba(0,0,255,0.7)]"
+                    className="w-full rounded-xl mt-4 object-cover group-hover:opacity-75  max-sm:h-80 sm:aspect-[2/1] lg:aspect-square transition-transform duration-300 hover:scale-110 drop-shadow-[0_0_10px_rgba(138,43,226,0.7)]"
                   />
                   <h3 className="mt-6 text-xl bg-gradient-to-r from-pink-500 to-blue-500 bg-clip-text text-transparent font-bold text-center">
                       <span className="absolute inset-0 text-xl " />
@@ -82,7 +87,7 @@ const callouts = [
                     </a>
                   </button>
                   <button>
-                    <a href={callout.href}
+                    <a href={callout.github}
                      className="px-2 pt-3 mt-3 mx-2 mb-3 bg-gradient-to-b from-rose-400 to-blue-500 rounded-xl text-black hover:bg-white hover:text-gray-100 font-bold py-2 px-4 rounded-lg">
                       github
                     </a>

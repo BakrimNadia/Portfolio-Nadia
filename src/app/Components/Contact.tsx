@@ -78,7 +78,7 @@ export default function Contact() {
                 name="firstName"
                 type="text"
                 autoComplete="given-name"
-                className="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-rose-600"
+                className="block w-full rounded-xl bg-white px-3.5 py-2 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-rose-400"
                 value={formData.firstName} 
                 onChange={handleChange}
               />
@@ -95,7 +95,7 @@ export default function Contact() {
                 name="lastName"
                 type="text"
                 autoComplete="family-name"
-                className="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-rose-600"
+                className="block w-full rounded-xl bg-white px-3.5 py-2 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-rose-400"
                 value={formData.lastName} 
                 onChange={handleChange}
               />
@@ -111,7 +111,7 @@ export default function Contact() {
                 name="company"
                 type="text"
                 autoComplete="organization"
-                className="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-rose-600"
+                className="block w-full rounded-xl bg-white px-3.5 py-2 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-rose-400"
                 value={formData.company}
                 onChange={handleChange}
               />
@@ -128,7 +128,7 @@ export default function Contact() {
                 name="email"
                 type="email"
                 autoComplete="email"
-                className="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-rose-600"
+                className="block w-full rounded-xl bg-white px-3.5 py-2 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-rose-400"
                 value={formData.email}
                 onChange={handleChange}
               />
@@ -139,13 +139,13 @@ export default function Contact() {
               Téléphone
             </label>
             <div className="mt-2.5">
-              <div className="flex rounded-md bg-white outline outline-1 -outline-offset-1 outline-gray-300 has-[input:focus-within]:outline has-[input:focus-within]:outline-2 has-[input:focus-within]:-outline-offset-2 has-[input:focus-within]:outline-rose-600">
+              <div className="flex rounded-xl bg-white outline outline-1 -outline-offset-1 outline-gray-300 has-[input:focus-within]:outline has-[input:focus-within]:outline-2 has-[input:focus-within]:-outline-offset-2 has-[input:focus-within]:outline-rose-400">
                 <input
                   id="phone-number"
                   name="phoneNumber"
                   type="text"
                   placeholder=""
-                  className="block min-w-0 grow py-1.5 pl-1 pr-3 text-base text-gray-900 placeholder:text-gray-400 focus:outline focus:outline-0 sm:text-sm/6"
+                  className="block min-w-0 grow rounded-xl py-1.5 pl-1 pr-3 text-base text-gray-900 placeholder:text-gray-400 focus:outline focus:outline-0 sm:text-sm/6"
                   value={formData.phoneNumber}
                   onChange={handleChange}
                 />
@@ -162,7 +162,7 @@ export default function Contact() {
                 id="message"
                 name="message"
                 rows={4}
-                className="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-rose-600"
+                className="block w-full rounded-xl bg-white px-3.5 py-2 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-rose-400"
                 value={formData.message}
                 onChange={handleChange}
               />
@@ -172,7 +172,7 @@ export default function Contact() {
         <div className="mt-10">
           <button
             type="submit"
-            className="block w-full rounded-xl bg-gradient-to-b from-rose-400 to-blue-500 tex-black px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-rose-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-rose-600"
+            className="block w-full rounded-xl bg-gradient-to-b from-rose-400 to-blue-500 tex-black px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-rose-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-rose-400"
           >
             Envoyer
           </button>
