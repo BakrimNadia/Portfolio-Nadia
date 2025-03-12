@@ -24,10 +24,10 @@ export default function About() {
       <h2 className="mb-10 text-2xl font-bold text-white animate-bounce text-rose-300">À propos de moi</h2>
 
       {/* Contenu des cadres */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-6xl w-full mb-5">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-6xl w-full mb-5 ">
         {/* Premier cadre */}
-        <div className="flex justify-center">
-            <NeonGradientCard className="max-w-sm items-center justify-center text-center transform transition-all duration-500 hover:scale-105">
+        <div className="max-w-lg flex justify-center mx-2">
+            <NeonGradientCard className=" items-center justify-center text-center transform transition-all duration-500 hover:scale-105">
               <span className="pointer-events-none z-10 h-full whitespace-pre-wrap bg-gradient-to-br from-[#ff2975] from-35% to-[#00FFF1] bg-clip-text text-center text-xl leading-none tracking-tighter dark:drop-shadow-[0_5px_5px_rgba(0,0,0,0.8)]">              
               <div className="flex justify-center my-4">
               <MessageCircle  size={40} className="text-pink-500 drop-shadow-[0_0_10px_rgb(255,105,180)]" />
@@ -52,9 +52,9 @@ export default function About() {
         </div>
 
         {/* Deuxième cadre */}
-        <div className="flex justify-center">
+        <div className=" max-w-lg flex justify-center mx-2">
 
-<NeonGradientCard className="max-w-sm items-center justify-center text-center transform transition-all duration-500 hover:scale-105">
+<NeonGradientCard className=" items-center justify-center text-center transform transition-all duration-500 hover:scale-105">
       <span className="pointer-events-none z-10 h-full whitespace-pre-wrap bg-gradient-to-br from-[#ff2975] from-35% to-[#00FFF1] bg-clip-text text-center text-xl leading-none tracking-tighter dark:drop-shadow-[0_5px_5px_rgba(0,0,0,0.8)]">
       <div className="flex justify-center my-4">
       <LaptopMinimalCheck size={40} className="text-pink-500 drop-shadow-[0_0_10px_rgb(255,105,180)]" />
