@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import { ArrowDown } from "react-feather";
 import Image from "next/image";
 import Navbar from "./Navbar";
+import Link from "next/link";
 
 export default function Header() {
   const greetings = [
@@ -19,13 +20,6 @@ export default function Header() {
     "مرحبًا",
   ];
 
-  const handleScroll = () => {
-    const aboutSection = document.getElementById("About");
-    if (aboutSection) {
-      aboutSection.scrollIntoView({ behavior: "smooth" });
-    }
-  };
-  
 
   return (
     <div className="relative h-screen bg-cover bg-center flex flex-col header-bg font-mono">
@@ -91,9 +85,9 @@ export default function Header() {
         transition={{ repeat: Infinity, duration: 1.5 }}
         className="absolute bottom-4 left-[calc(50%-16px)] justify-center items-center text-center transform -translate-x-1/2"
       >
-      <button onClick={handleScroll} title="Scroll down">
+ <Link href="#About">
     <ArrowDown color="white" size={60} />
-      </button>
+  </Link>
       </motion.div>
     </div>
   );
