@@ -9,7 +9,7 @@ const Accordion = ({ title, content }: { title: string; content: string }) => {
     <div className="border-b border-pink-400">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="w-full flex justify-between items-center p-4 text-left font-medium bg-gradient-to-r from-pink-500 via-yellow-200 to-blue-500 bg-clip-text text-transparent"
+        className="w-full flex justify-between items-center p-4 text-left font-bold text-lg bg-gradient-to-r from-pink-500 to-blue-500 bg-clip-text text-transparent"
       >
         {title}
         {isOpen ? <ChevronUp size={20} /> : <ChevronDown size={20} />}
@@ -20,7 +20,7 @@ const Accordion = ({ title, content }: { title: string; content: string }) => {
         transition={{ duration: 0.3, ease: "easeInOut" }}
         className="overflow-hidden px-4 bg-gradient-to-r from-pink-500 via-yellow-200 to-blue-500 bg-clip-text text-transparent"
       >
-        <p className="py-2 bg-gradient-to-r from-pink-500 via-yellow-200 to-blue-500 bg-clip-text text-transparent">{content}</p>
+        <p className="py-2 bg-gradient-to-r from-pink-500 to-blue-500 bg-clip-text text-transparent">{content}</p>
       </motion.div>
     </div>
   );
