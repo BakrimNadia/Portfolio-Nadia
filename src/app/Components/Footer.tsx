@@ -22,7 +22,7 @@ const Footer = () => {
           <FaGithub size={30} />
         </IconLink>
       </IconsContainer>
-      <Text>© 2025 - Tous drois réservés</Text>
+      <Text>© Bakrim Di Rosso Nadia - 2025 - Tous droits réservés</Text>
     </FooterContainer>
 )};
 
