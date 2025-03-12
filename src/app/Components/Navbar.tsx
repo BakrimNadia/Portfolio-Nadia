@@ -48,8 +48,9 @@ export default function Navbar() {
         <div className="fixed inset-0 z-10" />
         <DialogPanel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto px-6 py-6 bg-gradient-to-b from-black to-gray-500 opacity-80 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
           <div className="flex items-center text-center justify-between">
-            <a href="#" className="-m-1.5 p-1.5">
+            <a href="#" className="-m-1.5 p-1.5 ">
               <span className="sr-only"></span>
+              <div className="flex flex-shrink-0 items-center"></div>
               <img
                 alt="logo"
                 src="Nadia.svg"

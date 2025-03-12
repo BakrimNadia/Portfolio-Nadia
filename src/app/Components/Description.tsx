@@ -6,10 +6,10 @@ const Accordion = ({ title, content }: { title: string; content: string }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="border-b bg-gradient-to-r from-pink-500 via-yellow-200 to-blue-500 bg-clip-text text-transparent">
+    <div className="border-b border-pink-400">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="w-full flex justify-between items-center p-4 text-left font-medium"
+        className="w-full flex justify-between items-center p-4 text-left font-medium bg-gradient-to-r from-pink-500 via-yellow-200 to-blue-500 bg-clip-text text-transparent"
       >
         {title}
         {isOpen ? <ChevronUp size={20} /> : <ChevronDown size={20} />}
@@ -18,7 +18,7 @@ const Accordion = ({ title, content }: { title: string; content: string }) => {
         initial={{ height: 0, opacity: 0 }}
         animate={{ height: isOpen ? "auto" : 0, opacity: isOpen ? 1 : 0 }}
         transition={{ duration: 0.3, ease: "easeInOut" }}
-        className="overflow-hidden px-4"
+        className="overflow-hidden px-4 bg-gradient-to-r from-pink-500 via-yellow-200 to-blue-500 bg-clip-text text-transparent"
       >
         <p className="py-2 bg-gradient-to-r from-pink-500 via-yellow-200 to-blue-500 bg-clip-text text-transparent">{content}</p>
       </motion.div>
