@@ -43,6 +43,14 @@ const callouts = [
       href: 'https://dressing-shop-one.vercel.app/',
       github:'https://github.com/BakrimNadia/Dressing-shop',
     },
+    {
+      name: 'My-meteo',
+      description: 'Projet Front-end réalisé seule - technologies utilisées : React.js Next.js- Tailwind CSS - Déploiement : Vercel',
+      imageSrc: '/images/meteo.png',
+      imageAlt: 'Site d\'affichage météorologique par ville.',
+      href: 'https://my-meteo-fawn.vercel.app/',
+      github:'https://github.com/BakrimNadia/my-meteo',
+    },
   ]
 
   const scrollToProjects = () => {
