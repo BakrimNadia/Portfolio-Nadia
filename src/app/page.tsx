@@ -7,6 +7,7 @@ import Contact from "./Components/Contact";
 import Projects from "./Components/Projects";
 import { Skills } from "./Components/Skills";
 import Footer from "./Components/Footer";
+import FloatingButtons from "./Components/Floatingbuttons";
 
 export default function HomePage() {
   return (
@@ -24,6 +25,7 @@ export default function HomePage() {
      <Projects />
      <Contact />
      <Footer />
+     <FloatingButtons />
     </div>
   );
 }
