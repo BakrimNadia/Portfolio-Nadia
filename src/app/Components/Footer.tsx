@@ -1,76 +1,307 @@
 // components/Footer.js
-import React from 'react';
-import { FaLinkedin, FaGithub } from 'react-icons/fa';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
+import { FaLinkedin, FaGithub, FaEnvelope, FaGlobe } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <FooterContainer className="font-mono">
-      <IconsContainer>
-        <IconLink
-          href="https://www.linkedin.com/in/nadia-d-405849b9/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <FaLinkedin size={28} />
-        </IconLink>
-        <IconLink
-          href="https://github.com/BakrimNadia"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <FaGithub size={28} />
-        </IconLink>
-      </IconsContainer>
+    <FooterContainer>
+      <FooterInner className="font-mono">
+        {/* Colonne 1 : Brand */}
+        <Column>
+          <Brand>Bakrim Di Rosso Nadia</Brand>
+          <Tagline>Développeuse Web · Next.js & React</Tagline>
+          <SmallText>
+            Je conçois des interfaces modernes, performantes et centrées
+            utilisateur, avec un code clair, maintenable et orienté résultats.
+          </SmallText>
+        </Column>
 
-      <Text>
-        © {new Date().getFullYear()} <span>Bakrim Di Rosso Nadia</span> — Tous droits réservés
-      </Text>
+        {/* Colonne 2 : Navigation */}
+        <Column>
+          <ColumnTitle>Navigation</ColumnTitle>
+          <NavList>
+            <NavItem>
+              <NavLink href="#About">À propos</NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink href="#Skills">Compétences</NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink href="#Projects">Projets</NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink href="#Knowledge">Savoir-faire</NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink href="#Contact">Contact</NavLink>
+            </NavItem>
+          </NavList>
+        </Column>
+
+        {/* Colonne 3 : Contact & Social */}
+        <Column>
+          <ColumnTitle>Contact</ColumnTitle>
+          <ContactItem>
+            <FaEnvelope size={14} />
+            <a href="mailto:bakrimnadia.dev@gmail.com">
+              bakrimnadia.dev@gmail.com
+            </a>
+          </ContactItem>
+          <ContactItem>
+            <FaGlobe size={14} />
+            <span>Basée en France · Remote friendly</span>
+          </ContactItem>
+
+          <SocialWrapper>
+            <SocialLink
+              href="https://www.linkedin.com/in/nadia-d-405849b9/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn"
+            >
+              <FaLinkedin />
+            </SocialLink>
+            <SocialLink
+              href="https://github.com/BakrimNadia"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="GitHub"
+            >
+              <FaGithub />
+            </SocialLink>
+          </SocialWrapper>
+        </Column>
+      </FooterInner>
+
+      {/* Bas de page */}
+      <BottomBar>
+        <span>
+          © {new Date().getFullYear()}{" "}
+          <strong>Bakrim Di Rosso Nadia</strong> — Tous droits réservés
+        </span>
+        <BottomLinks>
+          <a href="#Projects">Voir mes projets</a>
+          <span>•</span>
+          <a href="#Contact">Travaillons ensemble</a>
+        </BottomLinks>
+      </BottomBar>
     </FooterContainer>
   );
 };
 
 const FooterContainer = styled.footer`
-  background: linear-gradient(135deg, #2b2b2b 0%, #1a1a1a 100%);
-  color: #f5eeea;
-  text-align: center;
-  padding: 25px 0 15px;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 -3px 10px rgba(0, 0, 0, 0.2);
+  position: relative;
+  margin-top: 0;
+  padding: 40px 20px 18px;
+
+  background:
+    radial-gradient(
+      circle at 50% 0%,
+      rgba(236, 72, 153, 0.12),
+      transparent 70%
+    ),
+    linear-gradient(135deg, #020817 0%, #050816 40%, #020817 100%);
+
+  color: #f5f5f5;
+  border-top: 1px solid rgba(148, 163, 253, 0.16);
+  box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(8px);
 `;
 
-const IconsContainer = styled.div`
+const FooterInner = styled.div`
+  max-width: 1100px;
+  margin: 0 auto 10px;
+  display: grid;
+  grid-template-columns: 1.6fr 1.1fr 1.3fr;
+  gap: 28px;
+  align-items: flex-start;
+
+  @media (max-width: 900px) {
+    grid-template-columns: 1fr 1fr;
+    row-gap: 24px;
+  }
+
+  @media (max-width: 640px) {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+`;
+
+const Column = styled.div`
   display: flex;
-  justify-content: center;
-  gap: 24px;
-  margin-bottom: 12px;
+  flex-direction: column;
+  gap: 8px;
 `;
 
-const IconLink = styled.a`
-  color: #f5eeea;
+const Brand = styled.h3`
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  background: linear-gradient(90deg, #ff7ac4, #38bdf8);
+  -webkit-background-clip: text;
+  color: transparent;
+  text-shadow: 0 0 8px rgba(236, 72, 153, 0.45);
+`;
+
+const Tagline = styled.p`
+  font-size: 0.9rem;
+  color: #f9fafb;
+  font-weight: 500;
+  margin: 2px 0 4px;
+`;
+
+const SmallText = styled.p`
+  font-size: 0.8rem;
+  line-height: 1.6;
+  color: rgba(226, 232, 240, 0.9);
+  max-width: 280px;
+
+  @media (max-width: 640px) {
+    max-width: 100%;
+    margin: 0 auto;
+    text-align: center;
+  }
+`;
+
+const ColumnTitle = styled.h4`
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #fb7185;
+  margin-bottom: 6px;
+`;
+
+const NavList = styled.ul`
+  list-style: none;
+  padding: 0;
+  margin: 4px 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+`;
+
+const NavItem = styled.li``;
+
+const NavLink = styled.a`
+  font-size: 0.85rem;
+  color: rgba(249, 250, 251, 0.82);
   text-decoration: none;
-  transition: all 0.3s ease;
-  transform: scale(1);
+  transition: all 0.25s ease;
+  position: relative;
 
   &:hover {
-    color: #f8bfbf; /* Rose pâle doux pour hover */
-    transform: scale(1.2);
+    color: #f9a8d4;
+    transform: translateX(4px);
+  }
+
+  @media (max-width: 640px) {
+    &:hover {
+      transform: translateX(0);
+      color: #f9a8d4;
+    }
   }
 `;
 
-const Text = styled.p`
-  font-size: 14px;
-  margin: 0;
-  letter-spacing: 0.3px;
-  color: rgba(245, 238, 234, 0.85);
+const ContactItem = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.85rem;
+  color: rgba(249, 250, 251, 0.9);
 
-  span {
-    font-weight: 600;
-    color: #fff;
+  a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: #38bdf8;
+    }
   }
 
-  @media (max-width: 480px) {
-    font-size: 12px;
+  @media (max-width: 640px) {
+    justify-content: center;
+  }
+`;
+
+const SocialWrapper = styled.div`
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+
+  @media (max-width: 640px) {
+    justify-content: center;
+  }
+`;
+
+const SocialLink = styled.a`
+  width: 30px;
+  height: 30px;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(
+    circle,
+    rgba(236, 72, 153, 0.16),
+    transparent
+  );
+  color: #e5e7eb;
+  border: 1px solid rgba(148, 163, 253, 0.35);
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+
+  &:hover {
+    color: #020817;
+    background: linear-gradient(to right, #fb7185, #e879f9, #38bdf8);
+    box-shadow: 0 0 18px rgba(236, 72, 153, 0.7);
+    transform: translateY(-2px) scale(1.06);
+  }
+`;
+
+const BottomBar = styled.div`
+  max-width: 1100px;
+  margin: 10px auto 0;
+  padding-top: 8px;
+  border-top: 1px solid rgba(148, 163, 253, 0.16);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 6px;
+  font-size: 0.75rem;
+  color: rgba(148, 163, 253, 0.9);
+
+  strong {
+    font-weight: 600;
+    color: #f9a8d4;
+  }
+
+  @media (max-width: 640px) {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+`;
+
+const BottomLinks = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+  a {
+    color: rgba(148, 163, 253, 0.95);
+    text-decoration: none;
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: #38bdf8;
+    }
+  }
+
+  @media (max-width: 640px) {
+    justify-content: center;
   }
 `;
 
