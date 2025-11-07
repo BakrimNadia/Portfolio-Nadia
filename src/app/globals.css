@@ -2,6 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #020817; /* même fond que ton site pour éviter le blanc */
+  overflow-x: hidden;        /* ✅ empêche le scroll horizontal parasite */
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+
+
 /* Ajout du fond d'écran */
 .header-bg {
   background-image: url("/images/PC-back.jpg");
