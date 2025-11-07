@@ -38,14 +38,6 @@ const callouts = [
     href: "https://comparatifia.vercel.app/",
   },
   {
-    name: "Fur-ever-home",
-    description:
-      "Projet Full Stack en équipe - rôle Scrum Master. Front : React.js, Next.js, NextUI • Back : Node.js, Express.js • DB : PostgreSQL • Déploiement : Vercel • Méthode : Scrum.",
-    imageSrc: "/images/fureverhome.png",
-    imageAlt: "Site Full Stack pour gestion de refuge animalier.",
-    href: "https://projet-fur-ever-home-front.vercel.app/",
-  },
-  {
     name: "Gazette des collègues",
     description:
       "Projet Full Stack solo. Next.js, Tailwind, NextUI • Node.js, Express.js • PostgreSQL • Déploiement : Vercel.",
@@ -92,6 +84,14 @@ const callouts = [
     imageSrc: "/images/organogold.png",
     imageAlt: "Site pour une entreprise de conciergerie.",
     href: "https://www.organo-gold.fr/",
+  },
+  {
+    name: "Fur-ever-home",
+    description:
+      "Projet Full Stack en équipe - rôle Scrum Master. Front : React.js, Next.js, NextUI • Back : Node.js, Express.js • DB : PostgreSQL • Déploiement : Vercel • Méthode : Scrum.",
+    imageSrc: "/images/fureverhome.png",
+    imageAlt: "Site Full Stack pour gestion de refuge animalier.",
+    href: "https://projet-fur-ever-home-front.vercel.app/",
   },
 ];
 
