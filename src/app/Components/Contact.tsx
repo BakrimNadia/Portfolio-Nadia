@@ -91,11 +91,11 @@ export default function Contact() {
           {/* Left column: image + pitch */}
           <div className="space-y-6">
             <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-black via-slate-900 to-fuchsia-900/40 p-[2px] shadow-[0_18px_60px_rgba(0,0,0,0.75)]">
-              <div className="relative h-full w-full rounded-3xl bg-black/95 p-4 sm:p-5 flex flex-col gap-4">
+              <div className="relative h-full w-full rounded-3xl bg-black/70 p-4 sm:p-5 flex flex-col gap-4">
                 {/* Image block */}
                 <div className="relative h-40 sm:h-52 w-full overflow-hidden rounded-2xl border border-white/5 bg-gradient-to-tr from-fuchsia-500/20 via-rose-500/10 to-sky-400/10">
                   <Image
-                    src="/images/dev-neon.jpg" // 🔁 remplace par ton visuel (setup dev, code, néon)
+                    src="/images/contact.jpg" // 🔁 remplace par ton visuel (setup dev, code, néon)
                     alt="Interface moderne en néon pour projet web"
                     fill
                     priority
