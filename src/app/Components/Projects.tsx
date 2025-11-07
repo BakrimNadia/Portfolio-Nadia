@@ -143,7 +143,7 @@ export default function Projects() {
             {callouts.map((callout) => (
               <NeonGradientCard
                 key={callout.name}
-                className="group relative flex h-full flex-col overflow-hidden rounded-3xl bg-black/90 backdrop-blur-md border border-white/5 shadow-[0_18px_60px_rgba(0,0,0,0.85)] transition-all duration-500 hover:-translate-y-1 hover:scale-[1.02]"
+                className="group relative flex h-full flex-col overflow-hidden rounded-3xl backdrop-blur-md border border-white/5 shadow-[0_18px_60px_rgba(0,0,0,0.85)] transition-all duration-500 hover:-translate-y-1 hover:scale-[1.02]"
                 borderRadius={26}
                 borderSize={2}
                 neonColors={{
