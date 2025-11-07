@@ -1,40 +1,43 @@
+"use client";
+
 import { NeonGradientCard } from "@/components/ui/neon-gradient-card";
-import { IconCloud } from "../../components/ui/icon-cloud";
+import { motion } from "framer-motion";
 import MyFile from "./MyFile";
 import Description from "./Description";
+import {
+  SiTypescript,
+  SiJavascript,
+  SiReact,
+  SiNextdotjs,
+  SiNodedotjs,
+  SiExpress,
+  SiPostgresql,
+  SiMongodb,
+  SiTailwindcss,
+  SiGithub,
+  SiVercel,
+  SiFigma,
+  SiCanva,
+  SiJira,
+} from "react-icons/si";
 
-const slugs = [
-  "typescript",
-  "javascript",
-  "dart",
-  "java",
-  "react",
-  "flutter",
-  "android",
-  "html5",
-  "css3",
-  "nodedotjs",
-  "express",
-  "nextdotjs",
-  "prisma",
-  "amazonaws",
-  "postgresql",
-  "firebase",
-  "nginx",
-  "vercel",
-  "testinglibrary",
-  "jest",
-  "cypress",
-  "docker",
-  "git",
-  "jira",
-  "github",
-  "gitlab",
-  "visualstudiocode",
-  "androidstudio",
-  "sonarqube",
-  "figma",
+const techIconComponents = [
+  SiTypescript,
+  SiJavascript,
+  SiReact,
+  SiNextdotjs,
+  SiNodedotjs,
+  SiExpress,
+  SiPostgresql,
+  SiMongodb,
+  SiTailwindcss,
+  SiGithub,
+  SiVercel,
+  SiFigma,
+  SiCanva,
+  SiJira,
 ];
+
 
 const scrollToSkills = () => {
   const section = document.getElementById("Skills");
@@ -51,40 +54,62 @@ const scrollToKnowledge = () => {
 };
 
 export function Skills() {
-  const images = slugs.map(
-    (slug) => `https://cdn.simpleicons.org/${slug}/${slug}`
-  );
-
   return (
     <section
       id="Skills"
-      className="container mx-auto px-4 py-16 font-mono"
+      className="relative container mx-auto px-4 py-16 font-mono"
     >
       {/* Titre + sous-titre */}
       <div className="text-center mb-8">
         <h2
-          className="text-4xl sm:text-5xl font-extrabold relative inline-block p-3 mb-3 gradient-text"
+          className="text-4xl sm:text-5xl font-extrabold relative inline-block p-3 mb-2 gradient-text"
           onMouseEnter={scrollToSkills}
         >
           Mes compétences
         </h2>
-        <p className="text-sm sm:text-base text-gray-500 max-w-2xl mx-auto">
-          Un stack moderne orienté performance, expérience utilisateur
-          et bonnes pratiques, pour des projets solides en production.
+        <p className="text-sm sm:text-base text-gray-400 max-w-2xl mx-auto">
+          Un stack orienté performance, UX et maintenabilité pour livrer des
+          projets fiables, modernes et prêts pour la production.
         </p>
       </div>
 
-      {/* IconCloud */}
-      <div className="relative flex size-full max-w-lg items-center justify-center overflow-hidden rounded-xl mx-auto mb-10 p-6">
-        <IconCloud images={images} />
-      </div>
+{/* Ruban animé avec icônes uniquement */}
+<div className="relative mb-10">
+  {/* halo doux */}
+  <div className="pointer-events-none absolute -inset-x-10 top-3 h-16 bg-gradient-to-r from-transparent via-pink-400/10 to-transparent blur-2xl" />
+
+  <div className="overflow-hidden py-4">
+    <motion.div
+      className="flex gap-8 whitespace-nowrap items-center"
+      animate={{ x: ["0%", "-50%"] }}
+      transition={{
+        duration: 25,
+        ease: "linear",
+        repeat: Infinity,
+      }}
+    >
+      {[...techIconComponents, ...techIconComponents].map((Icon, index) => (
+        <div
+          key={index}
+          className="flex items-center justify-center"
+        >
+          <Icon
+            className="h-8 w-8 sm:h-10 sm:w-10 text-pink-400 opacity-85 hover:opacity-100 transition-transform duration-300 hover:scale-125 drop-shadow-[0_0_10px_rgba(236,72,153,0.8)]"
+          />
+        </div>
+      ))}
+    </motion.div>
+  </div>
+</div>
+
+
+
 
       {/* Cartes compétences */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-        {/* Frontend */}
         <NeonGradientCard className="w-full h-full items-start justify-start text-left transform transition-all duration-500 hover:scale-105">
           <h3 className="pointer-events-none z-10 bg-gradient-to-br from-[#ff2975] via-[#ff7ac4] to-[#00FFF1] bg-clip-text text-xl font-semibold tracking-tight text-transparent">
-            Frontend moderne
+            Frontend 
           </h3>
           <ul className="mt-3 space-y-1 text-sm text-gray-700 font-medium">
             <li>JavaScript (ES6+)</li>
@@ -95,7 +120,6 @@ export function Skills() {
           </ul>
         </NeonGradientCard>
 
-        {/* UI / Design system */}
         <NeonGradientCard className="w-full h-full items-start justify-start text-left transform transition-all duration-500 hover:scale-105">
           <h3 className="pointer-events-none z-10 bg-gradient-to-br from-[#ff2975] via-[#ff7ac4] to-[#00FFF1] bg-clip-text text-xl font-semibold tracking-tight text-transparent">
             UI & Design system
@@ -109,7 +133,6 @@ export function Skills() {
           </ul>
         </NeonGradientCard>
 
-        {/* Backend & Data */}
         <NeonGradientCard className="w-full h-full items-start justify-start text-left transform transition-all duration-500 hover:scale-105">
           <h3 className="pointer-events-none z-10 bg-gradient-to-br from-[#ff2975] via-[#ff7ac4] to-[#00FFF1] bg-clip-text text-xl font-semibold tracking-tight text-transparent">
             Backend & Base de données
@@ -123,7 +146,6 @@ export function Skills() {
           </ul>
         </NeonGradientCard>
 
-        {/* Outils & DevOps light */}
         <NeonGradientCard className="w-full h-full items-start justify-start text-left transform transition-all duration-500 hover:scale-105">
           <h3 className="pointer-events-none z-10 bg-gradient-to-br from-[#ff2975] via-[#ff7ac4] to-[#00FFF1] bg-clip-text text-xl font-semibold tracking-tight text-transparent">
             Outils & productivité
@@ -133,24 +155,22 @@ export function Skills() {
             <li>Visual Studio Code</li>
             <li>Figma</li>
             <li>Canva</li>
-            <li>Monitoring qualité (SonarQube, etc.)</li>
+            <li>SonarQube & qualité</li>
           </ul>
         </NeonGradientCard>
 
-        {/* Hébergement & workflow projet */}
         <NeonGradientCard className="w-full h-full items-start justify-start text-left transform transition-all duration-500 hover:scale-105">
           <h3 className="pointer-events-none z-10 bg-gradient-to-br from-[#ff2975] via-[#ff7ac4] to-[#00FFF1] bg-clip-text text-xl font-semibold tracking-tight text-transparent">
             Déploiement & workflow
           </h3>
           <ul className="mt-3 space-y-1 text-sm text-gray-700 font-medium">
-            <li>Méthodes agiles / Scrum</li>
+            <li>Méthodes Agiles / Scrum</li>
             <li>Vercel, Render</li>
             <li>Trello, Jira</li>
             <li>CI/CD basique</li>
           </ul>
         </NeonGradientCard>
 
-        {/* Collaboration & Modélisation */}
         <NeonGradientCard className="w-full h-full items-start justify-start text-left transform transition-all duration-500 hover:scale-105">
           <h3 className="pointer-events-none z-10 bg-gradient-to-br from-[#ff2975] via-[#ff7ac4] to-[#00FFF1] bg-clip-text text-xl font-semibold tracking-tight text-transparent">
             Collaboration & Modélisation
@@ -158,7 +178,7 @@ export function Skills() {
           <ul className="mt-3 space-y-1 text-sm text-gray-700 font-medium">
             <li>Discord, Slack</li>
             <li>MCD / MLD / MPD</li>
-            <li>Drawio</li>
+            <li>Draw.io</li>
             <li>Communication claire client / équipe</li>
           </ul>
         </NeonGradientCard>

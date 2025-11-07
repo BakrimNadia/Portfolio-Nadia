@@ -110,7 +110,7 @@ export default function Contact() {
                 {/* Text */}
                 <div className="space-y-2">
                   <h3 className="text-lg sm:text-xl font-semibold text-white">
-                    Travailler avec un développeur qui comprend le terrain.
+                    Travailler avec une développeuse qui comprend le terrain.
                   </h3>
                   <p className="text-xs sm:text-sm text-gray-400 leading-relaxed">
                     Je conçois des sites et applications sur-mesure avec Next.js, React, TypeScript, Tailwind,
@@ -142,7 +142,7 @@ export default function Contact() {
               secondColor: '#00FFF1',
             }}
           >
-            <form onSubmit={handleSubmit} className="space-y-6">
+            <form onSubmit={handleSubmit} className="space-y-6 bg-white/30">
               <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
                 <div>
                   <label

@@ -14,7 +14,7 @@ const Accordion = ({ title, content }: AccordionProps) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="rounded-2xl border border-white/8 bg-black/10 backdrop-blur-md mb-2 overflow-hidden">
+    <div className="rounded-2xl border border-sky-300 backdrop-blur-md mb-2 overflow-hidden">
       <button
         onClick={() => setIsOpen((prev) => !prev)}
         className="w-full flex items-center justify-between gap-3 px-4 py-3 sm:px-5 sm:py-4 text-left"
@@ -90,7 +90,7 @@ export default function Description() {
             whileInView={{ opacity: 1, y: 0, scale: 1 }}
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.6, ease: "easeOut" }}
-            className="relative w-full h-64 sm:h-72 lg:h-72 rounded-3xl overflow-hidden border border-white/8 bg-black/70 backdrop-blur-md shadow-[0_20px_80px_rgba(0,0,0,0.9)]"
+            className="relative w-full h-64 sm:h-72 lg:h-72 rounded-3xl my-10 overflow-hidden border border-white/8 bg-black/70 backdrop-blur-md shadow-[0_20px_80px_rgba(0,0,0,0.9)]"
           >
             <Image
               src="/images/design2.jpg" // 🔁 remplace par ton visuel (setup code / néon / laptop)
