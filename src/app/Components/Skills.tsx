@@ -67,7 +67,7 @@ export function Skills() {
         >
           Mes compétences
         </h2>
-        <p className="text-sm sm:text-base text-gray-400 max-w-2xl mx-auto">
+        <p className="text-sm sm:text-base text-gray-500 max-w-2xl mx-auto">
           Un stack orienté performance, UX et maintenabilité pour livrer des
           projets fiables, modernes et prêts pour la production.
         </p>
@@ -197,6 +197,12 @@ export function Skills() {
         >
           Mon savoir-faire
         </h2>
+                  <div className="inline-flex items-center gap-2 rounded-full border border-rose-300 px-4 py-1 shadow-[0_0_18px_rgba(244,63,94,0.35)]">
+            <span className="h-1.5 w-1.5 rounded-full bg-rose-400 animate-pulse" />
+            <span className="text-[9px] sm:text-[10px] tracking-[0.22em] uppercase text-rose-300">
+              Soft skills & Hard skills
+            </span>
+          </div>
       </div>
 
       <Description />

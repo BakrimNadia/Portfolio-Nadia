@@ -25,12 +25,7 @@ export default function About() {
       className="relative flex flex-col items-center justify-center min-h-screen px-6 py-20 sm:py-24 lg:py-28 font-mono overflow-hidden"
     >
       {/* Glow arrière-plan */}
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl opacity-70"
-      >
-        <div className="relative left-1/2 aspect-[1108/632] w-[72rem] -translate-x-1/2 bg-[radial-gradient(circle_at_top,_rgba(244,63,94,0.28),_transparent_60%),radial-gradient(circle_at_bottom,_rgba(56,189,248,0.18),_transparent_65%)]" />
-      </div>
+     
 
       {/* Badge + titre principal */}
       <div className="text-center mb-4" onMouseEnter={scrollToAbout}>

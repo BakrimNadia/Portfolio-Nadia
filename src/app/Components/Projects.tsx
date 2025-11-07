@@ -108,14 +108,7 @@ export default function Projects() {
       id="Projects"
       className="relative w-full py-20 sm:py-24 lg:py-28 font-mono overflow-hidden"
     >
-      {/* Glow background */}
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl opacity-60"
-      >
-        <div className="relative left-1/2 aspect-[1108/632] w-[72rem] -translate-x-1/2 bg-[radial-gradient(circle_at_top,_rgba(236,72,153,0.25),_transparent_60%),radial-gradient(circle_at_bottom,_rgba(56,189,248,0.18),_transparent_65%)]" />
-      </div>
-
+  
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-gray-100">
         {/* Header */}
         <div className="text-center">

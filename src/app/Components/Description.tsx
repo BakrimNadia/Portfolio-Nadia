@@ -67,15 +67,7 @@ export default function Description() {
       <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-0">
         {/* Header */}
         <div className="text-center mb-8">
-          <div className="inline-flex items-center gap-2 rounded-full border border-rose-300 px-4 py-1 shadow-[0_0_18px_rgba(244,63,94,0.35)]">
-            <span className="h-1.5 w-1.5 rounded-full bg-rose-400 animate-pulse" />
-            <span className="text-[9px] sm:text-[10px] tracking-[0.22em] uppercase text-rose-300">
-              Soft skills & Hard skills
-            </span>
-          </div>
-          <h2 className="mt-3 text-2xl sm:text-3xl font-extrabold bg-gradient-to-r from-pink-400 via-fuchsia-400 to-sky-400 bg-clip-text text-transparent">
-            Ce que je construis concrètement
-          </h2>
+
           <p className="mt-2 text-xs sm:text-sm text-gray-400 max-w-2xl mx-auto">
             Explorez chaque domaine pour découvrir comment je transforme vos besoins
             en solutions digitales claires, modernes et efficaces.
