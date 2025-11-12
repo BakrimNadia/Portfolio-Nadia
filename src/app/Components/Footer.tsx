@@ -44,8 +44,8 @@ const Footer = () => {
           <ColumnTitle>Contact</ColumnTitle>
           <ContactItem>
             <FaEnvelope size={14} />
-            <a href="mailto:bakrimnadia.dev@gmail.com">
-              bakrimnadia.dev@gmail.com
+            <a href="mailto:nadiabakrim06@gmail.com">
+              nadiabakrim06@gmail.com
             </a>
           </ContactItem>
           <ContactItem>

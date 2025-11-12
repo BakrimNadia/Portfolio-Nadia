@@ -46,6 +46,14 @@ const callouts = [
     href: "https://gazette-des-collegues.vercel.app/",
   },
   {
+    name: "Sissi Pro Services",
+    description:
+      "Site vitrine pour services Nettoyage et Assistance administrative. Next.js • Tailwind CSS • Déploiement : Vercel.",
+    imageSrc: "/images/sissi.png",
+    imageAlt: "Site vitrine institut de beauté.",
+    href: "https://sissiproservices.fr/",
+  },
+  {
     name: "Nadia Beauty",
     description:
       "Site vitrine moderne pour institut de beauté. Next.js • Tailwind CSS • Déploiement : Vercel.",
@@ -153,7 +161,7 @@ export default function Projects() {
                   />
                   <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black via-black/10 to-transparent opacity-80 group-hover:opacity-60 transition-opacity duration-500" />
                   <div className="absolute bottom-3 left-3 text-[10px] px-2 py-1 rounded-full bg-black/70 border border-rose-200/30 text-rose-100">
-                    Next.js • Tailwind • Prod-ready
+                    Design moderne • Code performant • SEO optimisé
                   </div>
                 </div>
 
