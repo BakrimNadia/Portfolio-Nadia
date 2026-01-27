@@ -5,6 +5,23 @@ import { NeonGradientCard } from "@/components/ui/neon-gradient-card";
 
 const callouts = [
 
+
+{
+    name: "Jshabitat",
+    description:
+      "Projet Freelance - Front : React.js, Next.js, Tailwind CSS • Back : Node.js • Déploiement : Vercel • Méthode : Scrum.",
+    imageSrc: "/images/jshabitat.png",
+    imageAlt: "Site Pour agence immobilière.",
+    href: "https://www.jshabitat.com/",
+  },
+{
+    name: "Aldex",
+    description:
+      "Projet Freelance - Front : React.js, Next.js, Tailwind CSS • Back : Node.js • Déploiement : Vercel • Méthode : Scrum.",
+    imageSrc: "/images/aldex.png",
+    imageAlt: "Site Pour Diagnostic immobilier.",
+    href: "https://aldex-eight.vercel.app/",
+  },
 {
     name: "Acsy",
     description:
