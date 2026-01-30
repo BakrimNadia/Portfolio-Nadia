@@ -1,12 +1,18 @@
 import type { Metadata } from "next";
 
 import "./globals.css";
-import { Fira_Code } from "next/font/google";
+import { Inter, Playfair_Display } from "next/font/google";
 
-const firaCode = Fira_Code({
+const inter = Inter({
   subsets: ["latin"],
-  weight: ["400", "500", "700"], 
-  variable: "--font-fira-code", 
+  variable: "--font-sans",
+  display: "swap",
+});
+
+const playfair = Playfair_Display({
+  subsets: ["latin"],
+  variable: "--font-display",
+  display: "swap",
 });
 
 
@@ -21,8 +27,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html className={firaCode.variable} lang="en">
-       <body>
+    <html lang="en">
+       <body className={`${inter.variable} ${playfair.variable} antialiased`}>
         {children}
       </body>
     </html>

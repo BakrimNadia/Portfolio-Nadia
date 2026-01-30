@@ -1,103 +1,106 @@
-'use client'
+"use client";
 
-import { useState } from 'react'
-import {
-  Dialog,
-  DialogPanel,
-  PopoverGroup,
-} from '@headlessui/react'
-import {
-  Bars3Icon,
-  XMarkIcon,
-} from '@heroicons/react/24/outline'
+import { useState } from "react";
+import { Dialog, DialogPanel, PopoverGroup } from "@headlessui/react";
+import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 
-
+const links = [
+  { href: "#About", label: "À propos" },
+  { href: "#Skills", label: "Compétences" },
+  { href: "#Projects", label: "Projets" },
+];
 
 export default function Navbar() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className="text-white z-20 relative font-mono">
-      <nav aria-label="Global" className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8">
+    <header className="relative z-20">
+      <nav
+        aria-label="Global"
+        className="mx-auto flex max-w-7xl items-center justify-between px-6 lg:px-8 pt-6"
+      >
+        {/* Brand */}
+        <a href="#" className="inline-flex items-center gap-2">
+          <span className="font-display text-lg text-black/90 italic">
+            Nadia.
+          </span>
+        </a>
+
+        {/* Desktop links */}
+        <PopoverGroup className="hidden lg:flex items-center gap-8">
+          {links.map((l) => (
+            <a
+              key={l.href}
+              href={l.href}
+              className="text-sm font-medium text-black/70 hover:text-black transition"
+            >
+              {l.label}
+            </a>
+          ))}
+          <a
+            href="#Contact"
+            className="ml-2 inline-flex items-center justify-center rounded-full bg-black text-white px-5 py-2 text-sm font-medium soft-ring hover:opacity-90 transition"
+          >
+            Contact
+          </a>
+        </PopoverGroup>
+
+        {/* Mobile trigger */}
         <div className="flex lg:hidden">
           <button
             type="button"
             onClick={() => setMobileMenuOpen(true)}
-            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-200"
+            className="inline-flex items-center justify-center rounded-full bg-white/70 backdrop-blur px-3 py-2 soft-ring"
           >
             <span className="sr-only">Open main menu</span>
-            <Bars3Icon aria-hidden="true" className="size-6" />
+            <Bars3Icon aria-hidden="true" className="size-5 text-black/80" />
           </button>
         </div>
-        <PopoverGroup className="hidden lg:flex lg:gap-x-12">
-          <a href="#About" className="text-sm/6 font-semibold text-white hover:text-black">
-            A PROPOS
-            </a>
-          <a href="#Skills" className="text-sm/6 font-semibold text-white hover:text-black">
-            MES COMPETENCES
-          </a>
-          <a href="#Projects" className="text-sm/6 font-semibold text-white hover:text-black">
-            MES PROJETS
-          </a>
-          <a href="#Contact" className="text-sm/6 font-semibold text-white hover:text-black">
-            CONTACT
-          </a>
-        </PopoverGroup>
       </nav>
+
+      {/* Mobile panel */}
       <Dialog open={mobileMenuOpen} onClose={setMobileMenuOpen} className="lg:hidden">
-        <div className="fixed inset-0 z-10" />
-        <DialogPanel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto px-6 py-6 bg-gradient-to-b from-black to-gray-500 opacity-80 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
-          <div className="flex items-center text-center justify-between">
-            <a href="#" className="-m-1.5 p-1.5 ">
-              <span className="sr-only"></span>
-              <div className="flex flex-shrink-0 items-center"></div>
-              <img
-                alt="logo"
-                src="Nadia.svg"
-                className="h-8 w-auto px-10"
-              />
-            </a>
+        <div className="fixed inset-0 z-30 bg-black/20 backdrop-blur-sm" />
+        <DialogPanel className="fixed right-4 top-4 z-40 w-[92vw] max-w-sm overflow-hidden rounded-3xl bg-white/80 backdrop-blur-xl soft-ring">
+          <div className="flex items-center justify-between px-5 py-4">
+            <span className="font-display italic text-black/90">Nadia.</span>
             <button
               type="button"
               onClick={() => setMobileMenuOpen(false)}
-              className="-m-2.5 rounded-md p-2.5 text-gray-800"
+              className="rounded-full bg-white/70 backdrop-blur px-3 py-2 soft-ring"
             >
               <span className="sr-only">Close menu</span>
-              <XMarkIcon aria-hidden="true" className="size-6 text-gray-200" />
+              <XMarkIcon aria-hidden="true" className="size-5 text-black/80" />
             </button>
           </div>
-          <div className="mt-6 flow-root">
-            <div className="-my-6 divide-y divide-gray-500/10">
-              <div className="space-y-2 py-6 px-2">
+
+          <div className="px-5 pb-5">
+            <div className="flex flex-col gap-2">
+              {links.map((l) => (
                 <a
-                  href="#About"
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:text-rose-500"
+                  key={l.href}
+                  href={l.href}
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="rounded-2xl px-4 py-3 text-sm font-semibold text-black/80 hover:bg-white/70 transition"
                 >
-                    A PROPOS
+                  {l.label}
                 </a>
-                <a
-                  href="#Skills"
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white  hover:text-rose-500"
-                >
-                  COMPETENCES
-                </a>
-                <a
-                  href="#Projects"
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white  hover:text-rose-500"
-                >
-                  MES PROJETS
-                </a>
-                <a
-                  href="#Contact"
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white  hover:text-rose-500"
-                >
-                  CONTACT
-                </a>
-              </div>
+              ))}
+              <a
+                href="#Contact"
+                onClick={() => setMobileMenuOpen(false)}
+                className="mt-2 inline-flex items-center justify-center rounded-2xl bg-black text-white px-4 py-3 text-sm font-semibold soft-ring hover:opacity-90 transition"
+              >
+                Contact
+              </a>
+            </div>
+
+            <div className="mt-4 text-xs text-black/50">
+              Basée en France · Remote friendly
             </div>
           </div>
         </DialogPanel>
       </Dialog>
     </header>
-  )
+  );
 }
