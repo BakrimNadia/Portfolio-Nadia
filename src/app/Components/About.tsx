@@ -184,7 +184,7 @@ export default function About() {
             </motion.div>
           </div>
 
-          {/* Image / illustration animée */}
+           {/* Image / illustration animée */}
           <div className="lg:col-span-5">
             <motion.div
               initial={{ opacity: 0, scale: 0.97 }}
@@ -200,7 +200,7 @@ export default function About() {
               <motion.div
                 animate={{ y: [0, 10, 0] }}
                 transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
-                className="relative rounded-[34px] backdrop-blur p-3 "
+                className="relative rounded-[34px] border border-black/10 bg-white/55 backdrop-blur p-3 soft-card"
               >
                 <div className="relative overflow-hidden rounded-[28px]">
                   <Image
@@ -211,7 +211,6 @@ export default function About() {
                     className="h-[320px] sm:h-[380px] w-full opacity-80 object-cover"
                   />
                 </div>
-
               </motion.div>
             </motion.div>
           </div>
