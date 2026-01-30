@@ -1,12 +1,11 @@
 "use client";
 
 import Anim from "./Anim";
-import { NeonGradientCard } from "@/components/ui/neon-gradient-card";
+import { motion } from "framer-motion";
+import { ArrowUpRight, Sparkles } from "lucide-react";
 
 const callouts = [
-
-
-{
+  {
     name: "Jshabitat",
     description:
       "Projet Freelance - Front : React.js, Next.js, Tailwind CSS • Back : Node.js • Déploiement : Vercel • Méthode : Scrum.",
@@ -14,7 +13,7 @@ const callouts = [
     imageAlt: "Site Pour agence immobilière.",
     href: "https://www.jshabitat.com/",
   },
-{
+  {
     name: "Aldex",
     description:
       "Projet Freelance - Front : React.js, Next.js, Tailwind CSS • Back : Node.js • Déploiement : Vercel • Méthode : Scrum.",
@@ -22,7 +21,7 @@ const callouts = [
     imageAlt: "Site Pour Diagnostic immobilier.",
     href: "https://aldex-eight.vercel.app/",
   },
-{
+  {
     name: "Acsy",
     description:
       "Projet Freelance - Front : React.js, Next.js, Tailwind CSS • Back : Node.js • Déploiement : Vercel • Méthode : Scrum.",
@@ -71,14 +70,6 @@ const callouts = [
     href: "https://sissiproservices.fr/",
   },
   {
-    name: "Nadia Beauty",
-    description:
-      "Site vitrine moderne pour institut de beauté. Next.js • Tailwind CSS • Déploiement : Vercel.",
-    imageSrc: "/images/beauty2.png",
-    imageAlt: "Site vitrine institut de beauté.",
-    href: "https://nadiabeauty.vercel.app/",
-  },
-  {
     name: "Su Sushi",
     description:
       "Site vitrine de restaurant. Next.js • Tailwind CSS • Déploiement : Vercel.",
@@ -94,126 +85,224 @@ const callouts = [
     imageAlt: "Site démonstratif type e-commerce.",
     href: "https://dressing-shop-one.vercel.app/",
   },
-  {
-    name: "My-meteo",
-    description:
-      "App météo par ville. Next.js • Tailwind CSS • Déploiement : Vercel.",
-    imageSrc: "/images/meteo.png",
-    imageAlt: "Site d'affichage météorologique.",
-    href: "https://my-meteo-fawn.vercel.app/",
-  },
-  {
-    name: "Organogold",
-    description:
-      "Projet Freelance - Front : WordPress - Elementor • Déploiement : Wordpress • Méthode : Scrum.",
-    imageSrc: "/images/organogold.png",
-    imageAlt: "Site pour une entreprise de conciergerie.",
-    href: "https://www.organo-gold.fr/",
-  },
-  {
-    name: "Fur-ever-home",
-    description:
-      "Projet Full Stack en équipe - rôle Scrum Master. Front : React.js, Next.js, NextUI • Back : Node.js, Express.js • DB : PostgreSQL • Déploiement : Vercel • Méthode : Scrum.",
-    imageSrc: "/images/fureverhome.png",
-    imageAlt: "Site Full Stack pour gestion de refuge animalier.",
-    href: "https://projet-fur-ever-home-front.vercel.app/",
-  },
 ];
 
-const scrollToProjects = () => {
-  const section = document.getElementById("Projects");
-  if (section) {
-    section.scrollIntoView({ behavior: "smooth" });
-  }
+const fadeUp = {
+  hidden: { opacity: 0, y: 18 },
+  show: (i = 0) => ({
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.7, delay: 0.08 * i, ease: "easeOut" },
+  }),
 };
+
+const scrollToProjects = () => {
+  document.getElementById("Projects")?.scrollIntoView({ behavior: "smooth" });
+};
+
+function getTags(desc: string) {
+  const d = desc.toLowerCase();
+  const tags: string[] = [];
+
+  if (d.includes("freelance")) tags.push("Freelance");
+  if (d.includes("personel") || d.includes("personnel")) tags.push("Perso");
+  if (d.includes("full stack")) tags.push("Full Stack");
+  if (d.includes("wordpress")) tags.push("WordPress");
+  if (d.includes("next.js")) tags.push("Next.js");
+  if (d.includes("node.js")) tags.push("Node.js");
+
+  // limiter à 3 pour garder clean
+  return Array.from(new Set(tags)).slice(0, 3);
+}
+
+function ProjectCard({
+  name,
+  description,
+  imageSrc,
+  imageAlt,
+  href,
+  index,
+}: {
+  name: string;
+  description: string;
+  imageSrc: string;
+  imageAlt: string;
+  href: string;
+  index: number;
+}) {
+  const tags = getTags(description);
+
+  return (
+    <motion.article
+      variants={fadeUp}
+      custom={index}
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true, amount: 0.22 }}
+      whileHover={{ y: -4 }}
+      transition={{ type: "spring", stiffness: 260, damping: 22 }}
+      className="group relative overflow-hidden rounded-[32px] border border-black/10 bg-white/55 backdrop-blur soft-shadow"
+    >
+      {/* glow doux au hover */}
+      <div className="pointer-events-none absolute -inset-24 opacity-0 group-hover:opacity-100 transition duration-500">
+        <div className="absolute left-1/2 top-0 h-48 w-72 -translate-x-1/2 rounded-full bg-rose-200/35 blur-3xl" />
+        <div className="absolute right-0 bottom-0 h-44 w-64 rounded-full bg-amber-200/25 blur-3xl" />
+      </div>
+
+      {/* image */}
+      <div className="relative p-3">
+        <div className="relative overflow-hidden rounded-[26px]">
+          <img
+            alt={imageAlt}
+            src={imageSrc}
+            className="h-44 w-full object-cover transition duration-700 group-hover:scale-[1.04]"
+            loading="lazy"
+          />
+          {/* overlay soft */}
+          <div className="absolute inset-0 bg-gradient-to-t from-white/70 via-white/5 to-transparent opacity-70" />
+        </div>
+      </div>
+
+      {/* contenu */}
+      <div className="px-6 pb-6">
+        <div className="flex items-start justify-between gap-4">
+          <h3 className="font-sans text-lg sm:text-xl font-extrabold text-black/85">
+            {name}
+          </h3>
+
+          <a
+            href={href}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-black/10 bg-white/70 text-black/70 hover:text-black hover:bg-white transition"
+            aria-label={`Ouvrir ${name}`}
+          >
+            <ArrowUpRight size={18} />
+          </a>
+        </div>
+
+        {/* tags */}
+        {tags.length > 0 && (
+          <div className="mt-3 flex flex-wrap gap-2">
+            {tags.map((t) => (
+              <span
+                key={t}
+                className="rounded-full border border-black/10 bg-white/60 px-3 py-1 text-[11px] text-black/55"
+              >
+                {t}
+              </span>
+            ))}
+          </div>
+        )}
+
+        <p className="mt-4 text-[12px] sm:text-sm text-black/65 leading-6">
+          {description}
+        </p>
+
+        <div className="mt-6 flex items-center justify-between">
+          <span className="text-xs text-black/45">
+            UI propre · perf · SEO
+          </span>
+
+          <a
+            href={href}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center rounded-full bg-black px-5 py-2.5 text-xs font-semibold text-white hover:opacity-90 transition"
+          >
+            Voir le site
+          </a>
+        </div>
+      </div>
+    </motion.article>
+  );
+}
 
 export default function Projects() {
   return (
     <section
       id="Projects"
-      className="relative w-full py-20 sm:py-24 lg:py-28 font-mono overflow-hidden"
+      className="relative overflow-hidden section-cream px-6 py-20 sm:py-24 lg:py-28"
     >
-  
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-gray-100">
+      {/* grain léger */}
+      <div
+        className="pointer-events-none absolute inset-0 opacity-[0.06] mix-blend-multiply"
+        style={{
+          backgroundImage:
+            "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='220' height='220' filter='url(%23n)' opacity='.35'/%3E%3C/svg%3E\")",
+        }}
+      />
+
+      <div className="mx-auto max-w-7xl">
         {/* Header */}
         <div className="text-center">
-          <h2
-            className="text-4xl sm:text-5xl font-extrabold relative inline-block p-3 gradient-text"
+          <motion.div
+            variants={fadeUp}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, amount: 0.35 }}
             onMouseEnter={scrollToProjects}
+            className="inline-flex items-center gap-2 rounded-full border border-black/10 bg-white/70 backdrop-blur px-4 py-2 soft-shadow"
           >
-            Mes Projets
-          </h2>
+            <span className="inline-flex h-6 w-6 items-center justify-center rounded-full bg-black/5">
+              <Sparkles className="h-3.5 w-3.5 text-black/60" />
+            </span>
+            <span className="text-xs font-medium text-black/70">
+              Projets — sélection clients & perso
+            </span>
+          </motion.div>
 
-          <p className="mt-3 text-sm sm:text-base text-gray-400 max-w-2xl mx-auto">
+          <motion.h2
+            variants={fadeUp}
+            custom={1}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, amount: 0.35 }}
+            className="mt-5 font-display text-[40px] leading-[0.98] sm:text-[54px] lg:text-[64px] text-black"
+          >
+            Mes <span className="italic">projets</span>
+          </motion.h2>
+
+          <motion.p
+            variants={fadeUp}
+            custom={2}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, amount: 0.35 }}
+            className="mt-4 mx-auto max-w-2xl text-sm sm:text-base text-black/65 leading-7"
+          >
             Une sélection de projets Full Stack & Front-end qui illustrent ma maîtrise
             de Next.js, Node.js, Tailwind et des enjeux réels clients.
-          </p>
+          </motion.p>
         </div>
 
-        {/* Animation */}
-        <div className="relative flex max-w-lg items-center justify-center overflow-hidden rounded-2xl mx-auto mt-8 mb-10">
-          <Anim />
-        </div>
-
-        {/* Grid projets */}
-        <div className="mx-auto max-w-6xl">
-          <div className="mt-6 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-            {callouts.map((callout) => (
-              <NeonGradientCard
-                key={callout.name}
-                className="group relative flex h-full flex-col overflow-hidden rounded-3xl backdrop-blur-md border border-white/5 shadow-[0_18px_60px_rgba(0,0,0,0.85)] transition-all duration-500 hover:-translate-y-1 hover:scale-[1.02]"
-                borderRadius={26}
-                borderSize={2}
-                neonColors={{
-                  firstColor: "#ff00aa",
-                  secondColor: "#00FFF1",
-                }}
-              >
-                {/* Image + overlay */}
-                <div className="relative w-full overflow-hidden rounded-2xl mb-4">
-                  <img
-                    alt={callout.imageAlt}
-                    src={callout.imageSrc}
-                    className="h-44 w-full object-cover transition-transform duration-500 group-hover:scale-110 group-hover:brightness-110"
-                  />
-                  <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black via-black/10 to-transparent opacity-80 group-hover:opacity-60 transition-opacity duration-500" />
-                  <div className="absolute bottom-3 left-3 text-[10px] px-2 py-1 rounded-full bg-black/70 border border-rose-200/30 text-rose-100">
-                    Design moderne • Code performant • SEO optimisé
-                  </div>
-                </div>
-
-                {/* Titre */}
-                <h3 className="px-2 text-lg sm:text-xl font-semibold bg-gradient-to-r from-pink-400 via-fuchsia-400 to-sky-400 bg-clip-text text-transparent text-center">
-                  {callout.name}
-                </h3>
-
-                {/* Description */}
-                <p className="mt-2 px-4 pb-3 text-[11px] sm:text-xs text-gray-300 text-center leading-relaxed">
-                  {callout.description}
-                </p>
-
-                {/* Boutons */}
-                <div className="mt-auto flex items-center justify-center gap-3 pb-4 pt-1">
-                  <a
-                    href={callout.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center px-4 py-2 text-[11px] sm:text-xs font-semibold text-slate-800 rounded-xl border border-sky-200 bg-gradient-to-r from-rose-200 via-fuchsia-200 to-sky-200 shadow-md hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300"
-                  >
-                    Voir le site
-                  </a>
-                </div>
-              </NeonGradientCard>
-            ))}
+        {/* Anim (encadré soft) */}
+        <motion.div
+          variants={fadeUp}
+          custom={3}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.25 }}
+          className="relative mx-auto mt-10 mb-12 max-w-xl rounded-[32px] border border-black/10 bg-white/55 backdrop-blur p-4 soft-shadow"
+        >
+          <div className="relative overflow-hidden rounded-[26px]">
+            <Anim />
           </div>
+        </motion.div>
+
+        {/* Grid */}
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {callouts.map((c, idx) => (
+            <ProjectCard key={c.name} {...c} index={idx} />
+          ))}
         </div>
 
-        {/* Bas de section */}
-        <div className="mt-10 flex flex-col items-center gap-2">
-          <div className="h-px w-40 bg-gradient-to-r from-transparent via-rose-500/80 to-transparent" />
-          <p className="text-[10px] sm:text-xs text-gray-500 text-center">
-            Chaque interface est pensée
-            pour être rapide, claire, maintenable et alignée avec les objectifs métier.
+        {/* Bas */}
+        <div className="mt-12 flex flex-col items-center gap-3">
+          <div className="h-px w-44 soft-divider" />
+          <p className="text-xs sm:text-sm text-black/55 text-center max-w-2xl">
+            Chaque interface est pensée pour être rapide, claire, maintenable et
+            alignée avec les objectifs métier.
           </p>
         </div>
       </div>
