@@ -1,308 +1,208 @@
-// components/Footer.js
+"use client";
+
 import React from "react";
-import styled from "styled-components";
 import { FaLinkedin, FaGithub, FaEnvelope, FaGlobe } from "react-icons/fa";
 
-const Footer = () => {
+export default function Footer() {
+  const year = new Date().getFullYear();
+
   return (
-    <FooterContainer>
-      <FooterInner className="font-mono">
-        {/* Colonne 1 : Brand */}
-        <Column>
-          <Brand>Bakrim Di Rosso Nadia</Brand>
-          <Tagline>Développeuse Web · Next.js & React</Tagline>
-          <SmallText>
-            Je conçois des interfaces modernes, performantes et centrées
-            utilisateur, avec un code clair, maintenable et orienté résultats.
-          </SmallText>
-        </Column>
+    <footer className="relative overflow-hidden">
+      {/* Fond beige rosé + glow */}
+      <div className="absolute inset-0 -z-10">
+        <div className="h-full w-full bg-gradient-to-b from-[#fbf7f2] via-[#f6e7df] to-[#f1dfd4]" />
+        <div className="absolute -top-24 left-[-120px] h-[420px] w-[420px] rounded-full bg-rose-300/30 blur-3xl" />
+        <div className="absolute -top-24 right-[-140px] h-[420px] w-[420px] rounded-full bg-amber-200/30 blur-3xl" />
+        <div className="absolute bottom-[-140px] left-1/2 h-[420px] w-[520px] -translate-x-1/2 rounded-full bg-white/40 blur-3xl" />
 
-        {/* Colonne 2 : Navigation */}
-        <Column>
-          <ColumnTitle>Navigation</ColumnTitle>
-          <NavList>
-            <NavItem>
-              <NavLink href="#About">À propos</NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink href="#Skills">Compétences</NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink href="#Projects">Projets</NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink href="#Knowledge">Savoir-faire</NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink href="#Contact">Contact</NavLink>
-            </NavItem>
-          </NavList>
-        </Column>
+        {/* Grain léger */}
+        <div
+          className="absolute inset-0 opacity-[0.08] mix-blend-multiply"
+          style={{
+            backgroundImage:
+              "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='220' height='220' filter='url(%23n)' opacity='.35'/%3E%3C/svg%3E\")",
+          }}
+        />
+      </div>
 
-        {/* Colonne 3 : Contact & Social */}
-        <Column>
-          <ColumnTitle>Contact</ColumnTitle>
-          <ContactItem>
-            <FaEnvelope size={14} />
-            <a href="mailto:nadiabakrim06@gmail.com">
-              nadiabakrim06@gmail.com
-            </a>
-          </ContactItem>
-          <ContactItem>
-            <FaGlobe size={14} />
-            <span>Basée en France · Remote friendly</span>
-          </ContactItem>
+      <div className="mx-auto max-w-7xl px-6 lg:px-8 py-14">
+        {/* Card */}
+        <div className="rounded-[32px] border border-black/10 bg-white/55 backdrop-blur-xl shadow-[0_18px_60px_rgba(20,20,20,0.10)]">
+          <div className="p-8 sm:p-10">
+            <div className="grid gap-10 lg:grid-cols-12">
+              {/* Brand */}
+              <div className="lg:col-span-5">
+                <div className="flex items-center gap-3">
+                  <span className="font-display italic text-xl text-black/90">
+                    Nadia.
+                  </span>
+                  <span className="text-xs rounded-full border border-black/10 bg-white/70 px-3 py-1 text-black/70">
+                    Next.js · React · Full Stack JS
+                  </span>
+                </div>
 
-          <SocialWrapper>
-            <SocialLink
-              href="https://www.linkedin.com/in/nadia-d-405849b9/"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="LinkedIn"
-            >
-              <FaLinkedin />
-            </SocialLink>
-            <SocialLink
-              href="https://github.com/BakrimNadia"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="GitHub"
-            >
-              <FaGithub />
-            </SocialLink>
-          </SocialWrapper>
-        </Column>
-      </FooterInner>
+                <p className="mt-4 text-sm leading-6 text-black/65 max-w-md">
+                  Je conçois des expériences web modernes, performantes et
+                  centrées utilisateur — avec un code clair, maintenable et une
+                  vraie sensibilité UI.
+                </p>
 
-      {/* Bas de page */}
-      <BottomBar>
-        <span>
-          © {new Date().getFullYear()}{" "}
-          <strong>Bakrim Di Rosso Nadia</strong> — Tous droits réservés
-        </span>
-        <BottomLinks>
-          <a href="#Projects">Voir mes projets</a>
-          <span>•</span>
-          <a href="#Contact">Travaillons ensemble</a>
-        </BottomLinks>
-      </BottomBar>
-    </FooterContainer>
+                {/* Contact quick */}
+                <div className="mt-6 space-y-3">
+                  <a
+                    href="mailto:nadiabakrim06@gmail.com"
+                    className="group inline-flex items-center gap-3 text-sm text-black/70 hover:text-black transition"
+                  >
+                    <span className="flex h-9 w-9 items-center justify-center rounded-full border border-black/10 bg-white/70 group-hover:bg-white transition">
+                      <FaEnvelope size={14} />
+                    </span>
+                    nadiabakrim06@gmail.com
+                  </a>
+
+                  <div className="inline-flex items-center gap-3 text-sm text-black/65">
+                    <span className="flex h-9 w-9 items-center justify-center rounded-full border border-black/10 bg-white/70">
+                      <FaGlobe size={14} />
+                    </span>
+                    Basée en France · Remote friendly
+                  </div>
+                </div>
+
+                {/* Social */}
+                <div className="mt-7 flex items-center gap-2">
+                  <SocialIcon
+                    href="https://www.linkedin.com/in/nadia-d-405849b9/"
+                    label="LinkedIn"
+                  >
+                    <FaLinkedin />
+                  </SocialIcon>
+                  <SocialIcon
+                    href="https://github.com/BakrimNadia"
+                    label="GitHub"
+                  >
+                    <FaGithub />
+                  </SocialIcon>
+                </div>
+              </div>
+
+              {/* Navigation */}
+              <div className="lg:col-span-4">
+                <p className="text-xs font-semibold tracking-[0.18em] uppercase text-black/50">
+                  Navigation
+                </p>
+
+                <div className="mt-5 grid grid-cols-2 gap-2">
+                  <FooterLink href="#About">À propos</FooterLink>
+                  <FooterLink href="#Skills">Compétences</FooterLink>
+                  <FooterLink href="#Projects">Projets</FooterLink>
+                  <FooterLink href="#Knowledge">Savoir-faire</FooterLink>
+                  <FooterLink href="#Contact">Contact</FooterLink>
+                </div>
+              </div>
+
+              {/* CTA */}
+              <div className="lg:col-span-3">
+                <p className="text-xs font-semibold tracking-[0.18em] uppercase text-black/50">
+                  Collaboration
+                </p>
+
+                <p className="mt-5 text-sm text-black/65 leading-6">
+                  Tu as un projet web ou une opportunité ? On en parle et je te
+                  propose une solution claire, design et efficace.
+                </p>
+
+                <div className="mt-6 flex flex-col gap-3">
+                  <a
+                    href="#Projects"
+                    className="inline-flex items-center justify-center rounded-full bg-black px-5 py-3 text-sm font-medium text-white shadow-[0_10px_30px_rgba(20,20,20,0.18)] hover:opacity-90 transition"
+                  >
+                    Voir mes projets
+                  </a>
+                  <a
+                    href="#Contact"
+                    className="inline-flex items-center justify-center rounded-full border border-black/10 bg-white/70 px-5 py-3 text-sm font-medium text-black/80 hover:bg-white transition"
+                  >
+                    Travaillons ensemble
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            {/* Divider */}
+            <div className="mt-10 h-px w-full bg-black/10" />
+
+            {/* Bottom bar */}
+            <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+              <span className="text-xs text-black/55">
+                © {year}{" "}
+                <strong className="font-semibold text-black/80">
+                  Bakrim Di Rosso Nadia
+                </strong>{" "}
+                — Tous droits réservés
+              </span>
+
+              <div className="flex items-center gap-3 text-xs text-black/55">
+                <a
+                  className="hover:text-black transition"
+                  href="#Projects"
+                >
+                  Projets
+                </a>
+                <span className="opacity-40">•</span>
+                <a
+                  className="hover:text-black transition"
+                  href="#Contact"
+                >
+                  Contact
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
   );
-};
+}
 
-const FooterContainer = styled.footer`
-  position: relative;
-  margin-top: 0;
-  padding: 40px 20px 18px;
+/** --- petits composants --- **/
 
-  background:
-    radial-gradient(
-      circle at 50% 0%,
-      rgba(236, 72, 153, 0.12),
-      transparent 70%
-    ),
-    linear-gradient(135deg, #020817 0%, #050816 40%, #020817 100%);
-
-  color: #f5f5f5;
-  border-top: 1px solid rgba(148, 163, 253, 0.16);
-  box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.75);
-  backdrop-filter: blur(8px);
-`;
-
-const FooterInner = styled.div`
-  max-width: 1100px;
-  margin: 0 auto 10px;
-  display: grid;
-  grid-template-columns: 1.6fr 1.1fr 1.3fr;
-  gap: 28px;
-  align-items: flex-start;
-
-  @media (max-width: 900px) {
-    grid-template-columns: 1fr 1fr;
-    row-gap: 24px;
-  }
-
-  @media (max-width: 640px) {
-    grid-template-columns: 1fr;
-    text-align: center;
-  }
-`;
-
-const Column = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-`;
-
-const Brand = styled.h3`
-  font-size: 1.25rem;
-  font-weight: 700;
-  letter-spacing: 0.5px;
-  background: linear-gradient(90deg, #ff7ac4, #38bdf8);
-  -webkit-background-clip: text;
-  color: transparent;
-  text-shadow: 0 0 8px rgba(236, 72, 153, 0.45);
-`;
-
-const Tagline = styled.p`
-  font-size: 0.9rem;
-  color: #f9fafb;
-  font-weight: 500;
-  margin: 2px 0 4px;
-`;
-
-const SmallText = styled.p`
-  font-size: 0.8rem;
-  line-height: 1.6;
-  color: rgba(226, 232, 240, 0.9);
-  max-width: 280px;
-
-  @media (max-width: 640px) {
-    max-width: 100%;
-    margin: 0 auto;
-    text-align: center;
-  }
-`;
-
-const ColumnTitle = styled.h4`
-  font-size: 0.85rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: #fb7185;
-  margin-bottom: 6px;
-`;
-
-const NavList = styled.ul`
-  list-style: none;
-  padding: 0;
-  margin: 4px 0 0;
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-`;
-
-const NavItem = styled.li``;
-
-const NavLink = styled.a`
-  font-size: 0.85rem;
-  color: rgba(249, 250, 251, 0.82);
-  text-decoration: none;
-  transition: all 0.25s ease;
-  position: relative;
-
-  &:hover {
-    color: #f9a8d4;
-    transform: translateX(4px);
-  }
-
-  @media (max-width: 640px) {
-    &:hover {
-      transform: translateX(0);
-      color: #f9a8d4;
-    }
-  }
-`;
-
-const ContactItem = styled.div`
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 0.85rem;
-  color: rgba(249, 250, 251, 0.9);
-
-  a {
-    color: inherit;
-    text-decoration: none;
-    transition: color 0.2s ease;
-
-    &:hover {
-      color: #38bdf8;
-    }
-  }
-
-  @media (max-width: 640px) {
-    justify-content: center;
-  }
-`;
-
-const SocialWrapper = styled.div`
-  display: flex;
-  gap: 10px;
-  margin-top: 10px;
-
-  @media (max-width: 640px) {
-    justify-content: center;
-  }
-`;
-
-const SocialLink = styled.a`
-  width: 30px;
-  height: 30px;
-  border-radius: 999px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: radial-gradient(
-    circle,
-    rgba(236, 72, 153, 0.16),
-    transparent
+function FooterLink({
+  href,
+  children,
+}: {
+  href: string;
+  children: React.ReactNode;
+}) {
+  return (
+    <a
+      href={href}
+      className="group rounded-2xl border border-black/10 bg-white/55 px-4 py-3 text-sm text-black/70 backdrop-blur hover:bg-white/80 hover:text-black transition"
+    >
+      <span className="inline-flex items-center gap-2">
+        <span className="h-1.5 w-1.5 rounded-full bg-rose-400/70 group-hover:bg-black/60 transition" />
+        {children}
+      </span>
+    </a>
   );
-  color: #e5e7eb;
-  border: 1px solid rgba(148, 163, 253, 0.35);
-  transition: all 0.3s ease;
-  font-size: 0.9rem;
+}
 
-  &:hover {
-    color: #020817;
-    background: linear-gradient(to right, #fb7185, #e879f9, #38bdf8);
-    box-shadow: 0 0 18px rgba(236, 72, 153, 0.7);
-    transform: translateY(-2px) scale(1.06);
-  }
-`;
-
-const BottomBar = styled.div`
-  max-width: 1100px;
-  margin: 10px auto 0;
-  padding-top: 8px;
-  border-top: 1px solid rgba(148, 163, 253, 0.16);
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 6px;
-  font-size: 0.75rem;
-  color: rgba(148, 163, 253, 0.9);
-
-  strong {
-    font-weight: 600;
-    color: #f9a8d4;
-  }
-
-  @media (max-width: 640px) {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-`;
-
-const BottomLinks = styled.div`
-  display: flex;
-  align-items: center;
-  gap: 6px;
-
-  a {
-    color: rgba(148, 163, 253, 0.95);
-    text-decoration: none;
-    transition: color 0.2s ease;
-
-    &:hover {
-      color: #38bdf8;
-    }
-  }
-
-  @media (max-width: 640px) {
-    justify-content: center;
-  }
-`;
-
-export default Footer;
+function SocialIcon({
+  href,
+  label,
+  children,
+}: {
+  href: string;
+  label: string;
+  children: React.ReactNode;
+}) {
+  return (
+    <a
+      href={href}
+      aria-label={label}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-black/10 bg-white/65 text-black/70 shadow-sm hover:bg-white hover:text-black transition hover:-translate-y-0.5"
+    >
+      {children}
+    </a>
+  );
+}

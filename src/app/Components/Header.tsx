@@ -106,8 +106,7 @@ export default function Header() {
               </span>{" "}
               — React / Next.js.  
               <span className="block mt-1">
-                Entre deux métiers : je développe tout en gardant mon poste de
-                chauffeur de bus.
+                Je conçois des sites et applications sur-mesure avec Next.js, React, TypeScript, Tailwind, en pensant UX, performance et crédibilité de votre image.
               </span>
             </motion.p>
 
