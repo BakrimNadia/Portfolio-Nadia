@@ -170,29 +170,19 @@ export default function Header() {
               className="relative mx-auto w-[260px] sm:w-[320px] lg:w-[420px] floaty"
             >
               {/* glow */}
-              <div className="absolute -inset-8 rounded-[40px] bg-gradient-to-tr from-rose-200/60 via-white/20 to-amber-200/50 blur-2xl" />
+              <div className="absolute -inset-8 rounded-[40px] bg-gradient-to-tr from-rose-200/60 via-white/20 to-pink-200/50 blur-2xl" />
 
               {/* card */}
-              <div className="relative rounded-[40px] bg-white/60 backdrop-blur-md p-3 soft-ring">
-                <div className="relative overflow-hidden rounded-[34px]">
+              <div className="relative backdrop-blur-md p-3 ">
+                <div className="relative overflow-hidden ">
                   <Image
-                    src="/images/Nadia.JPG"
+                    src="/images/nadia-header.png"
                     alt="Photo de Nadia"
                     width={700}
                     height={900}
                     className="h-[340px] sm:h-[420px] lg:h-[520px] w-full object-cover"
                     priority
                   />
-                </div>
-
-                {/* mini infos */}
-                <div className="mt-3 flex items-center justify-between px-2 pb-1">
-                  <div className="text-xs text-black/60">
-                    Basée en France · Remote friendly
-                  </div>
-                  <div className="text-xs font-semibold text-black/80">
-                    Next.js · React
-                  </div>
                 </div>
               </div>
             </motion.div>
