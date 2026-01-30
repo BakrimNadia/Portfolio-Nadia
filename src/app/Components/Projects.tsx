@@ -3,6 +3,7 @@
 import Anim from "./Anim";
 import { motion } from "framer-motion";
 import { ArrowUpRight, Sparkles } from "lucide-react";
+import Image from "next/image";
 
 const callouts = [
   {
@@ -151,16 +152,19 @@ function ProjectCard({
 
       {/* image */}
       <div className="relative p-3">
-        <div className="relative overflow-hidden rounded-[26px]">
-          <img
-            alt={imageAlt}
-            src={imageSrc}
-            className="h-44 w-full object-cover transition duration-700 group-hover:scale-[1.04]"
-            loading="lazy"
-          />
-          {/* overlay soft */}
-          <div className="absolute inset-0 bg-gradient-to-t from-white/70 via-white/5 to-transparent opacity-70" />
-        </div>
+        <div className="relative h-44 w-full overflow-hidden rounded-[26px]">
+    <Image
+      src={imageSrc}
+      alt={imageAlt}
+      fill
+      sizes="(max-width: 768px) 100vw, 33vw"
+      className="object-cover transition duration-700 group-hover:scale-[1.04]"
+      loading="lazy"
+    />
+
+    {/* overlay soft */}
+    <div className="absolute inset-0 bg-gradient-to-t from-white/70 via-white/5 to-transparent opacity-70" />
+  </div>
       </div>
 
       {/* contenu */}
