@@ -1,7 +1,9 @@
 "use client";
 
+
 import React from "react";
 import { FaLinkedin, FaGithub, FaEnvelope, FaGlobe } from "react-icons/fa";
+import Image from "next/image";
 
 export default function Footer() {
   const year = new Date().getFullYear();
@@ -32,14 +34,20 @@ export default function Footer() {
             <div className="grid gap-10 lg:grid-cols-12">
               {/* Brand */}
               <div className="lg:col-span-5">
-                <div className="flex items-center gap-3">
-                  <span className="font-display italic text-xl text-black/90">
-                    Nadia.
-                  </span>
-                  <span className="text-xs rounded-full border border-black/10 bg-white/70 px-3 py-1 text-black/70">
-                    Next.js · React · Full Stack JS
-                  </span>
-                </div>
+<div className="flex items-center gap-3">
+  <Image
+    src="/images/nad-logo1.svg"
+    alt="Nadia Di Rosso – Logo"
+    width={42}
+    height={42}
+    className="h-9 w-auto"
+    priority
+  />
+
+  <span className="text-xs rounded-full border border-black/10 bg-white/70 px-3 py-1 text-black/70">
+    Next.js · React · Full Stack JS
+  </span>
+</div>
 
                 <p className="mt-4 text-sm leading-6 text-black/65 max-w-md">
                   Je conçois des expériences web modernes, performantes et

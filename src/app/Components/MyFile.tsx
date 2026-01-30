@@ -1,6 +1,6 @@
 export default function MyFile() {
     const handleOpenPDF = () => {
-      window.open("/doc/CV NADIA DI ROSSO BAKRIM 1.pdf", "_blank");
+      window.open("/doc/CV-nadia-db.pdf", "_blank");
     };
   
     return (

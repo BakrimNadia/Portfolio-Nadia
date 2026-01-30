@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { Dialog, DialogPanel, PopoverGroup } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 
@@ -19,12 +20,17 @@ export default function Navbar() {
         aria-label="Global"
         className="mx-auto flex max-w-7xl items-center justify-between px-6 lg:px-8 pt-6"
       >
-        {/* Brand */}
-        <a href="#" className="inline-flex items-center gap-2">
-          <span className="font-display text-lg text-black/90 italic">
-            Nadia.
-          </span>
-        </a>
+{/* Brand / Logo */}
+<a href="#" className="inline-flex items-center gap-2">
+  <Image
+    src="/images/nad-logo1.svg"
+    alt="Nadia Di Rosso – Logo"
+    width={40}
+    height={40}
+    priority
+    className="h-8 w-auto sm:h-9"
+  />
+</a>
 
         {/* Desktop links */}
         <PopoverGroup className="hidden lg:flex items-center gap-8">
