@@ -9,7 +9,7 @@ const callouts = [
   {
     name: "Jshabitat",
     description:
-      "Projet Freelance - Front : React.js, Next.js, Tailwind CSS • Back : Node.js • Déploiement : Vercel • Méthode : Scrum.",
+      "Projet Freelance - Front : React.js, Next.js, Tailwind CSS • Back : Node.js - PostgreSQL • Déploiement : Vercel - Render • Méthode : Scrum.",
     imageSrc: "/images/jshabitat.png",
     imageAlt: "Site Pour agence immobilière.",
     href: "https://www.jshabitat.com/",
@@ -65,7 +65,7 @@ const callouts = [
   {
     name: "Gazette des collègues",
     description:
-      "Projet Full Stack solo. Next.js, Tailwind, NextUI • Node.js, Express.js • PostgreSQL • Déploiement : Vercel.",
+      "Projet Full Stack solo. Next.js, Tailwind, NextUI • Node.js, Express.js • PostgreSQL • Déploiement : Vercel - Render.",
     imageSrc: "/images/gazette2.png",
     imageAlt: "Site full stack gazette d'entreprise.",
     href: "https://gazette-des-collegues.vercel.app/",
