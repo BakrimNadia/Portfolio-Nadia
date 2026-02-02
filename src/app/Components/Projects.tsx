@@ -54,6 +54,14 @@ const callouts = [
     imageAlt: "Site comparatif des différentes IA actuelles.",
     href: "https://comparatifia.vercel.app/",
   },
+   {
+    name: "Organo-gold",
+    description:
+      "Site vitrine pour services de conciergerie . Next.js • Tailwind CSS • Déploiement : Vercel.",
+    imageSrc: "/images/organo.png",
+    imageAlt: "Site vitrine conciergerie.",
+    href: "https://organo-gold-nu.vercel.app/",
+  },
   {
     name: "Gazette des collègues",
     description:
@@ -67,7 +75,7 @@ const callouts = [
     description:
       "Site vitrine pour services Nettoyage et Assistance administrative. Next.js • Tailwind CSS • Déploiement : Vercel.",
     imageSrc: "/images/sissi.png",
-    imageAlt: "Site vitrine institut de beauté.",
+    imageAlt: "Site vitrine nettoyage et assistance administrative.",
     href: "https://sissiproservices.fr/",
   },
   {
