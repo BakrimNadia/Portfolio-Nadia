@@ -58,7 +58,7 @@ const callouts = [
     name: "Organo-gold",
     description:
       "Site vitrine pour services de conciergerie . Next.js • Tailwind CSS • Déploiement : Vercel.",
-    imageSrc: "/images/organo.jpg",
+    imageSrc: "/images/organo.png",
     imageAlt: "Site vitrine conciergerie.",
     href: "https://organo-gold-nu.vercel.app/",
   },
