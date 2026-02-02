@@ -220,7 +220,7 @@ export function Skills() {
                   items={[
                     { label: "Tailwind CSS", level: 86, tags: ["responsive", "tokens", "animations"] },
                     { label: "UI libraries", level: 74, tags: ["NextUI", "Headless UI"] },
-                    { label: "Figma", level: 72, tags: ["maquettes", "prototypes"] },
+                    { label: "Figma / Canva", level: 72, tags: ["maquettes", "prototypes"] },
                     { label: "Micro-interactions", level: 78, tags: ["Framer Motion"] },
                   ]}
                 />
@@ -239,7 +239,7 @@ export function Skills() {
                   title="Workflow & delivery"
                   items={[
                     { label: "Git / GitHub", level: 78, tags: ["branches", "PR"] },
-                    { label: "Vercel", level: 82, tags: ["deploy", "env"] },
+                    { label: "Vercel / Render", level: 82, tags: ["deploy", "env"] },
                     { label: "Jira / Agile", level: 66, tags: ["Scrum", "Kanban"] },
                     { label: "Qualité", level: 62, tags: ["ESLint", "Prettier"] },
                   ]}
