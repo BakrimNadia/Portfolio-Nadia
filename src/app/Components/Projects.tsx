@@ -62,6 +62,15 @@ const callouts = [
     imageAlt: "Site vitrine conciergerie.",
     href: "https://organo-gold-nu.vercel.app/",
   },
+
+   {
+    name: "Pokedex",
+    description:
+      "Projet Full Stack solo. Next.js, Tailwind, NextUI • Api pokedex • Déploiement : Vercel.",
+    imageSrc: "/images/pokedex.png",
+    imageAlt: "Site de pokedex démo.",
+    href: "https://pokedex-psi-azure.vercel.app/",
+  },
   {
     name: "Gazette des collègues",
     description:
