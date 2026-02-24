@@ -176,7 +176,7 @@ export default function Header() {
               <div className="relative backdrop-blur-md p-3 ">
                 <div className="relative overflow-hidden ">
                   <Image
-                    src="/images/nadia-header.png"
+                    src="/images/nadia-header4.png"
                     alt="Photo de Nadia"
                     width={700}
                     height={900}
